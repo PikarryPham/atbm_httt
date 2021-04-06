@@ -267,12 +267,12 @@ namespace atbm
                 string tenuser = quanly_user_name.Text.ToLower();
                 string passuser = quanly_user_password.Text.ToLower();
                 int quotanum = 0;
+                string tablespace = quanly_user_tablespace.Text.ToLower();
                 if ((quanly_user_quota.Text != "" && quanly_user_tablespace.Text != ""))
                 {
                     MessageBox.Show(quanly_user_quota.Text);
                     quotanum = Int32.Parse(quanly_user_quota.Text);
                 }
-                string tablespace = quanly_user_tablespace.Text.ToLower();
                 //
                 OracleCommand objCmd = new OracleCommand("c##administrator.AD_Sua_User", conn);
                 objCmd.CommandType = CommandType.StoredProcedure;
@@ -335,6 +335,34 @@ namespace atbm
                 //conn.Dispose();
             }
             Console.Read();
+        }
+
+        private void inforquyen_searchuser_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            try
+            {
+                DataTable newdt = new DataTable();
+                String search = inforquyen_user.Text.ToUpper();
+                OracleCommand objCmd = new OracleCommand("c##administrator.AD_Xem_moi_user_tren_bang", conn);
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.Parameters.Add("ten_user", OracleDbType.Varchar2).Value = search;
+                objCmd.Parameters.Add("CAU2a", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                objCmd.ExecuteNonQuery();
+                OracleDataAdapter da = new OracleDataAdapter(objCmd);
+                da.Fill(newdt);
+                searchuserquyen.DataSource = newdt;
+                MessageBox.Show("Tim kiem thanh cong!");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Da co loi xay ra. Loi nhu sau: " + err);
+                Console.WriteLine(err.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
