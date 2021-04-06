@@ -50,7 +50,6 @@ namespace atbm
             {
                 MessageBox.Show("Vui long kiem tra lai password va username");
             }
-
             objCmd.Connection.Close();
         }
     }

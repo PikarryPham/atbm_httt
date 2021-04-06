@@ -157,13 +157,11 @@ namespace atbm
             this.taorolebtn = new System.Windows.Forms.Button();
             this.thongtinquyen = new System.Windows.Forms.TabPage();
             this.objectCol = new System.Windows.Forms.DataGridView();
-            this.objectTable = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.inforquyen_object = new System.Windows.Forms.TextBox();
+            this.searchquyenrole = new System.Windows.Forms.DataGridView();
             this.inforquyen_role = new System.Windows.Forms.TextBox();
             this.inforquyen_user = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.inforquyen_search = new System.Windows.Forms.Button();
+            this.rolequyen_search = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dsnguoidung = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -171,6 +169,7 @@ namespace atbm
             this.timkiemuserrolelbl = new System.Windows.Forms.Label();
             this.timkiemuserroletb = new System.Windows.Forms.TextBox();
             this.bigtabcontrol = new System.Windows.Forms.TabControl();
+            this.inforquyen_searchuser = new System.Windows.Forms.Button();
             this.ktraquyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.thuhoiquyen.SuspendLayout();
@@ -207,7 +206,7 @@ namespace atbm
             this.rolegb.SuspendLayout();
             this.thongtinquyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectCol)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchquyenrole)).BeginInit();
             this.dsnguoidung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.bigtabcontrol.SuspendLayout();
@@ -989,7 +988,7 @@ namespace atbm
             "NV_PHUCAP",
             "NV_PB",
             "NV_CONLV"});
-            this.NHAN_VIEN.Location = new System.Drawing.Point(565, 29);
+            this.NHAN_VIEN.Location = new System.Drawing.Point(589, 29);
             this.NHAN_VIEN.Margin = new System.Windows.Forms.Padding(4);
             this.NHAN_VIEN.Name = "NHAN_VIEN";
             this.NHAN_VIEN.Size = new System.Drawing.Size(171, 259);
@@ -1322,7 +1321,7 @@ namespace atbm
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(266, 22);
+            this.label9.Location = new System.Drawing.Point(267, 21);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 17);
@@ -1429,7 +1428,7 @@ namespace atbm
             // quanly_assignforuser
             // 
             this.quanly_assignforuser.AutoSize = true;
-            this.quanly_assignforuser.Location = new System.Drawing.Point(311, 18);
+            this.quanly_assignforuser.Location = new System.Drawing.Point(297, 18);
             this.quanly_assignforuser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quanly_assignforuser.Name = "quanly_assignforuser";
             this.quanly_assignforuser.Size = new System.Drawing.Size(108, 17);
@@ -1438,7 +1437,7 @@ namespace atbm
             // 
             // grantrole_username
             // 
-            this.grantrole_username.Location = new System.Drawing.Point(315, 38);
+            this.grantrole_username.Location = new System.Drawing.Point(301, 38);
             this.grantrole_username.Margin = new System.Windows.Forms.Padding(4);
             this.grantrole_username.Name = "grantrole_username";
             this.grantrole_username.Size = new System.Drawing.Size(221, 22);
@@ -1558,6 +1557,7 @@ namespace atbm
             this.capnhatpass_userbtn.TabIndex = 9;
             this.capnhatpass_userbtn.Text = "Cập nhật";
             this.capnhatpass_userbtn.UseVisualStyleBackColor = true;
+            this.capnhatpass_userbtn.Click += new System.EventHandler(this.capnhatpass_userbtn_Click);
             // 
             // label6
             // 
@@ -1586,6 +1586,7 @@ namespace atbm
             this.xoauserbtn.TabIndex = 1;
             this.xoauserbtn.Text = "Xóa";
             this.xoauserbtn.UseVisualStyleBackColor = true;
+            this.xoauserbtn.Click += new System.EventHandler(this.xoauserbtn_Click);
             // 
             // createuserbtn
             // 
@@ -1596,6 +1597,7 @@ namespace atbm
             this.createuserbtn.TabIndex = 0;
             this.createuserbtn.Text = "Tạo";
             this.createuserbtn.UseVisualStyleBackColor = true;
+            this.createuserbtn.Click += new System.EventHandler(this.createuserbtn_Click);
             // 
             // rolegb
             // 
@@ -1686,14 +1688,13 @@ namespace atbm
             // 
             // thongtinquyen
             // 
+            this.thongtinquyen.Controls.Add(this.inforquyen_searchuser);
             this.thongtinquyen.Controls.Add(this.objectCol);
-            this.thongtinquyen.Controls.Add(this.objectTable);
-            this.thongtinquyen.Controls.Add(this.label3);
-            this.thongtinquyen.Controls.Add(this.inforquyen_object);
+            this.thongtinquyen.Controls.Add(this.searchquyenrole);
             this.thongtinquyen.Controls.Add(this.inforquyen_role);
             this.thongtinquyen.Controls.Add(this.inforquyen_user);
             this.thongtinquyen.Controls.Add(this.label2);
-            this.thongtinquyen.Controls.Add(this.inforquyen_search);
+            this.thongtinquyen.Controls.Add(this.rolequyen_search);
             this.thongtinquyen.Controls.Add(this.label1);
             this.thongtinquyen.Location = new System.Drawing.Point(4, 25);
             this.thongtinquyen.Name = "thongtinquyen";
@@ -1713,74 +1714,57 @@ namespace atbm
             this.objectCol.Size = new System.Drawing.Size(451, 378);
             this.objectCol.TabIndex = 16;
             // 
-            // objectTable
+            // searchquyenrole
             // 
-            this.objectTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.objectTable.Location = new System.Drawing.Point(18, 132);
-            this.objectTable.Name = "objectTable";
-            this.objectTable.RowHeadersWidth = 51;
-            this.objectTable.RowTemplate.Height = 24;
-            this.objectTable.Size = new System.Drawing.Size(468, 378);
-            this.objectTable.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(634, 13);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 17);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Tên đối tượng dữ liệu";
-            // 
-            // inforquyen_object
-            // 
-            this.inforquyen_object.Location = new System.Drawing.Point(637, 43);
-            this.inforquyen_object.Margin = new System.Windows.Forms.Padding(4);
-            this.inforquyen_object.Name = "inforquyen_object";
-            this.inforquyen_object.Size = new System.Drawing.Size(194, 22);
-            this.inforquyen_object.TabIndex = 13;
+            this.searchquyenrole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchquyenrole.Location = new System.Drawing.Point(18, 132);
+            this.searchquyenrole.Name = "searchquyenrole";
+            this.searchquyenrole.RowHeadersWidth = 51;
+            this.searchquyenrole.RowTemplate.Height = 24;
+            this.searchquyenrole.Size = new System.Drawing.Size(468, 378);
+            this.searchquyenrole.TabIndex = 15;
             // 
             // inforquyen_role
             // 
-            this.inforquyen_role.Location = new System.Drawing.Point(342, 43);
+            this.inforquyen_role.Location = new System.Drawing.Point(18, 43);
             this.inforquyen_role.Margin = new System.Windows.Forms.Padding(4);
             this.inforquyen_role.Name = "inforquyen_role";
-            this.inforquyen_role.Size = new System.Drawing.Size(194, 22);
+            this.inforquyen_role.Size = new System.Drawing.Size(468, 22);
             this.inforquyen_role.TabIndex = 11;
             // 
             // inforquyen_user
             // 
-            this.inforquyen_user.Location = new System.Drawing.Point(18, 43);
+            this.inforquyen_user.Location = new System.Drawing.Point(508, 43);
             this.inforquyen_user.Margin = new System.Windows.Forms.Padding(4);
             this.inforquyen_user.Name = "inforquyen_user";
-            this.inforquyen_user.Size = new System.Drawing.Size(194, 22);
+            this.inforquyen_user.Size = new System.Drawing.Size(451, 22);
             this.inforquyen_user.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(339, 13);
+            this.label2.Location = new System.Drawing.Point(15, 13);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tên role";
             // 
-            // inforquyen_search
+            // rolequyen_search
             // 
-            this.inforquyen_search.Location = new System.Drawing.Point(436, 92);
-            this.inforquyen_search.Margin = new System.Windows.Forms.Padding(4);
-            this.inforquyen_search.Name = "inforquyen_search";
-            this.inforquyen_search.Size = new System.Drawing.Size(100, 28);
-            this.inforquyen_search.TabIndex = 10;
-            this.inforquyen_search.Text = "Tìm kiếm";
-            this.inforquyen_search.UseVisualStyleBackColor = true;
+            this.rolequyen_search.Location = new System.Drawing.Point(189, 97);
+            this.rolequyen_search.Margin = new System.Windows.Forms.Padding(4);
+            this.rolequyen_search.Name = "rolequyen_search";
+            this.rolequyen_search.Size = new System.Drawing.Size(100, 28);
+            this.rolequyen_search.TabIndex = 10;
+            this.rolequyen_search.Text = "Tìm kiếm";
+            this.rolequyen_search.UseVisualStyleBackColor = true;
+            this.rolequyen_search.Click += new System.EventHandler(this.rolequyen_search_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Location = new System.Drawing.Point(650, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 17);
@@ -1855,6 +1839,16 @@ namespace atbm
             this.bigtabcontrol.Size = new System.Drawing.Size(1117, 545);
             this.bigtabcontrol.TabIndex = 1;
             // 
+            // inforquyen_searchuser
+            // 
+            this.inforquyen_searchuser.Location = new System.Drawing.Point(694, 97);
+            this.inforquyen_searchuser.Margin = new System.Windows.Forms.Padding(4);
+            this.inforquyen_searchuser.Name = "inforquyen_searchuser";
+            this.inforquyen_searchuser.Size = new System.Drawing.Size(100, 28);
+            this.inforquyen_searchuser.TabIndex = 17;
+            this.inforquyen_searchuser.Text = "Tìm kiếm";
+            this.inforquyen_searchuser.UseVisualStyleBackColor = true;
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1928,7 +1922,7 @@ namespace atbm
             this.thongtinquyen.ResumeLayout(false);
             this.thongtinquyen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectCol)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchquyenrole)).EndInit();
             this.dsnguoidung.ResumeLayout(false);
             this.dsnguoidung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -2062,13 +2056,11 @@ namespace atbm
         private System.Windows.Forms.Button taorolebtn;
         private System.Windows.Forms.TabPage thongtinquyen;
         private System.Windows.Forms.DataGridView objectCol;
-        private System.Windows.Forms.DataGridView objectTable;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox inforquyen_object;
+        private System.Windows.Forms.DataGridView searchquyenrole;
         private System.Windows.Forms.TextBox inforquyen_role;
         private System.Windows.Forms.TextBox inforquyen_user;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button inforquyen_search;
+        private System.Windows.Forms.Button rolequyen_search;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage dsnguoidung;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -2082,6 +2074,7 @@ namespace atbm
         private System.Windows.Forms.Button grantquyen_btn;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox grantrole_rolepassif;
+        private System.Windows.Forms.Button inforquyen_searchuser;
     }
 }
 
