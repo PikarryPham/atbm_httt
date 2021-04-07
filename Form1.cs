@@ -402,13 +402,293 @@ namespace atbm
 
         private void selectbtn_Click(object sender, EventArgs e)
         {
-            if(this.smallControl.SelectedTab == nhanvien)
+            conn.Open();
+            if (capquyenrolerb.Checked) //Neu nguoi dung chon role --> if bang nao --> select view tren bang do
             {
-                MessageBox.Show("Tab nhan vien dang duoc mo");
+                switch (this.smallControl.SelectedTab)
+                { 
+
+                }
             }
-            else if (this.smallControl.SelectedTab == kham)
+            else if (capquyenuserrb.Checked)
             {
-                MessageBox.Show("Tab kham dang duoc mo");
+               
+                if (this.smallControl.SelectedTab == thuoc)
+                {
+                    //MessageBox.Show("Tab Thuoc dang duoc mo");
+                    try
+                    {
+                        string userName = capquyen_user_name.Text;
+                        string userView = viewinputname_capquyen.Text;
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Select_Thuoc_cho_User", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userName = new OracleParameter("@Ten_user", OracleDbType.Varchar2);
+                        capquyen_userName.Value = userName;
+                        objCmd.Parameters.Add(capquyen_userName);
+                        OracleParameter capquyen_viewName = new OracleParameter("@Ten_view", OracleDbType.Varchar2);
+                        capquyen_viewName.Value = userView;
+                        objCmd.Parameters.Add(capquyen_viewName);
+                        //doi voi cac bien option
+                        OracleParameter T_IDParam = new OracleParameter("@T_ID", OracleDbType.Int32);
+                        if (T_ID.Checked)
+                        {
+                            T_IDParam.Value = 1;
+                            objCmd.Parameters.Add(T_IDParam);
+                        }
+                        else
+                        {
+                            T_IDParam.Value = 0;
+                            objCmd.Parameters.Add(T_IDParam);
+                        }
+                        OracleParameter T_TENTHUOCParam = new OracleParameter("@T_TENTHUOC", OracleDbType.Int32);
+                        if (T_TENTHUOC.Checked)
+                        {
+                            T_TENTHUOCParam.Value = 1;
+                            objCmd.Parameters.Add(T_TENTHUOCParam);
+                        }
+                        else
+                        {
+                            T_TENTHUOCParam.Value = 0;
+                            objCmd.Parameters.Add(T_TENTHUOCParam);
+                        }
+                        OracleParameter T_HANGParam = new OracleParameter("@T_HANG", OracleDbType.Int32);
+                        if (T_HANG.Checked)
+                        {
+                            T_HANGParam.Value = 1;
+                            objCmd.Parameters.Add(T_HANGParam);
+                        }
+                        else
+                        {
+                            T_HANGParam.Value = 0;
+                            objCmd.Parameters.Add(T_HANGParam);
+                        }
+                        OracleParameter T_DONGIAParam = new OracleParameter("@T_DONGIA", OracleDbType.Int32);
+                        if (T_DONGIA.Checked)
+                        {
+                            T_DONGIAParam.Value = 1;
+                            objCmd.Parameters.Add(T_DONGIAParam);
+                        }
+                        else
+                        {
+                            T_DONGIAParam.Value = 0;
+                            objCmd.Parameters.Add(T_DONGIAParam);
+                        }
+                        OracleParameter grant_optionParam = new OracleParameter("@GRANT_OP", OracleDbType.Int32);
+                        if (grantoption_THUOC.Checked)
+                        {
+                            grant_optionParam.Value = 1;
+                            objCmd.Parameters.Add(grant_optionParam);
+                        }
+                        else
+                        {
+                            grant_optionParam.Value = 0;
+                            objCmd.Parameters.Add(grant_optionParam);
+                        }
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
+
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra" + err); ;
+                        Console.WriteLine(err.StackTrace);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+                else if (this.smallControl.SelectedTab == nhanvien)
+                {
+                    try
+                    {
+                        string userName = capquyen_user_name.Text;
+                        string userView = viewinputname_capquyen.Text;
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Select_Nhan_Vien_cho_User", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userName = new OracleParameter("@Ten_user", OracleDbType.Varchar2);
+                        capquyen_userName.Value = userName;
+                        objCmd.Parameters.Add(capquyen_userName);
+                        OracleParameter capquyen_viewName = new OracleParameter("@Ten_view", OracleDbType.Varchar2);
+                        capquyen_viewName.Value = userView;
+                        objCmd.Parameters.Add(capquyen_viewName);
+                        //Doi voi cac bien option
+                        OracleParameter NV_IDParam = new OracleParameter("@NV_ID", OracleDbType.Int32);
+                        if (NV_ID.Checked)
+                        {
+                            NV_IDParam.Value = 1;
+                            objCmd.Parameters.Add(NV_IDParam);
+                        }
+                        else
+                        {
+                            NV_IDParam.Value = 0;
+                            objCmd.Parameters.Add(NV_IDParam);
+                        }
+                        OracleParameter NV_TENParam = new OracleParameter("@NV_TEN", OracleDbType.Int32);
+                        if (NV_TEN.Checked)
+                        {
+                            NV_TENParam.Value = 1;
+                            objCmd.Parameters.Add(NV_TENParam);
+                        }
+                        else
+                        {
+                            NV_TENParam.Value = 0;
+                            objCmd.Parameters.Add(NV_TENParam);
+                        }
+                        OracleParameter NV_NAMSINHParam = new OracleParameter("@NV_NAMSINH", OracleDbType.Int32);
+                        if (NV_NAMSINH.Checked)
+                        {
+                            NV_NAMSINHParam.Value = 1;
+                            objCmd.Parameters.Add(NV_NAMSINHParam);
+                        }
+                        else
+                        {
+                            NV_NAMSINHParam.Value = 0;
+                            objCmd.Parameters.Add(NV_NAMSINHParam);
+                        }
+                        OracleParameter NV_DIACHIParam = new OracleParameter("@NV_DIACHI", OracleDbType.Int32);
+                        if (NV_DIACHI.Checked)
+                        {
+                            NV_DIACHIParam.Value = 1;
+                            objCmd.Parameters.Add(NV_DIACHIParam);
+                        }
+                        else
+                        {
+                            NV_DIACHIParam.Value = 0;
+                            objCmd.Parameters.Add(NV_DIACHIParam);
+                        }
+                        OracleParameter NV_SDTParam = new OracleParameter("@NV_SDT", OracleDbType.Int32);
+                        if (NV_SDT.Checked)
+                        {
+                            NV_SDTParam.Value = 1;
+                            objCmd.Parameters.Add(NV_SDTParam);
+                        }
+                        else
+                        {
+                            NV_SDTParam.Value = 0;
+                            objCmd.Parameters.Add(NV_SDTParam);
+                        }
+                        OracleParameter NV_LUONGParam = new OracleParameter("@NV_LUONG", OracleDbType.Int32);
+                        if (NV_LUONG.Checked)
+                        {
+                            NV_LUONGParam.Value = 1;
+                            objCmd.Parameters.Add(NV_LUONGParam);
+                        }
+                        else
+                        {
+                            NV_LUONGParam.Value = 0;
+                            objCmd.Parameters.Add(NV_LUONGParam);
+                        }
+                        OracleParameter NV_LUONGCBParam = new OracleParameter("@NV_LUONGCB", OracleDbType.Int32);
+                        if (NV_LUONGCB.Checked)
+                        {
+                            NV_LUONGCBParam.Value = 1;
+                            objCmd.Parameters.Add(NV_LUONGCBParam);
+                        }
+                        else
+                        {
+                            NV_LUONGCBParam.Value = 0;
+                            objCmd.Parameters.Add(NV_LUONGCBParam);
+                        }
+                        OracleParameter NV_LOAIParam = new OracleParameter("@NV_LOAI", OracleDbType.Int32);
+                        if (NV_LUONGCB.Checked)
+                        {
+                            NV_LOAIParam.Value = 1;
+                            objCmd.Parameters.Add(NV_LOAIParam);
+                        }
+                        else
+                        {
+                            NV_LOAIParam.Value = 0;
+                            objCmd.Parameters.Add(NV_LOAIParam);
+                        }
+                        OracleParameter NV_SONGAYCONGParam = new OracleParameter("@NV_SONGAYCONG", OracleDbType.Int32);
+                        if (NV_SONGAYCONG.Checked)
+                        {
+                            NV_SONGAYCONGParam.Value = 1;
+                            objCmd.Parameters.Add(NV_SONGAYCONGParam);
+                        }
+                        else
+                        {
+                            NV_SONGAYCONGParam.Value = 0;
+                            objCmd.Parameters.Add(NV_SONGAYCONGParam);
+                        }
+                        OracleParameter NV_PHUCAPParam = new OracleParameter("@NV_PHUCAP", OracleDbType.Int32);
+                        if (NV_PHUCAP.Checked)
+                        {
+                            NV_PHUCAPParam.Value = 1;
+                            objCmd.Parameters.Add(NV_PHUCAPParam);
+                        }
+                        else
+                        {
+                            NV_PHUCAPParam.Value = 0;
+                            objCmd.Parameters.Add(NV_PHUCAPParam);
+                        }
+                        OracleParameter NV_PBParam = new OracleParameter("@NV_PB", OracleDbType.Int32);
+                        if (NV_PB.Checked)
+                        {
+                            NV_PBParam.Value = 1;
+                            objCmd.Parameters.Add(NV_PBParam);
+                        }
+                        else
+                        {
+                            NV_PBParam.Value = 0;
+                            objCmd.Parameters.Add(NV_PBParam);
+                        }
+                        OracleParameter NV_CONLVParam = new OracleParameter("@NV_CONLV", OracleDbType.Int32);
+                        NV_CONLVParam.Value = NV_CONLV.Checked ? 1:0; // Su dung toan tu 3 ngoi
+                        objCmd.Parameters.Add(NV_CONLVParam);
+                        OracleParameter grant_optionParam = new OracleParameter("@GRANT_OP", OracleDbType.Int32);
+                        grant_optionParam.Value = grantNhanvien.Checked ? 1 : 0;
+                        objCmd.Parameters.Add(grant_optionParam);
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra" + err); ;
+                        Console.WriteLine(err.StackTrace);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+                else if (this.smallControl.SelectedTab == phongban)
+                {
+
+                }
+                else if (this.smallControl.SelectedTab == benhnhan)
+                {
+
+                }
+                else if (this.smallControl.SelectedTab == dichvukham)
+                {
+
+                }
+                else if (this.smallControl.SelectedTab == dichvukham)
+                {
+
+                }
+                else if (this.smallControl.SelectedTab == donthuoc)
+                {
+
+                }
+                else if (this.smallControl.SelectedTab == ctdonthuoc)
+                {
+
+                }
+                else if (this.smallControl.SelectedTab == sudungdv)
+                {
+
+                }
             }
         }
 
@@ -522,6 +802,8 @@ namespace atbm
         {
 
         }
+
+        
 
         // Hien thi ds quyen tinh den muc bang - revoke
 

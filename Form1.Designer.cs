@@ -32,6 +32,8 @@ namespace atbm
             this.account = new System.Windows.Forms.Label();
             this.audit = new System.Windows.Forms.TabPage();
             this.thuhoiquyen = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.viewname_revokequyen = new System.Windows.Forms.TextBox();
             this.revokequyen_listquyen = new System.Windows.Forms.DataGridView();
@@ -41,37 +43,35 @@ namespace atbm
             this.revokedelete = new System.Windows.Forms.Button();
             this.revokeinsert = new System.Windows.Forms.Button();
             this.revokeselect = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.nv_revoke = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.nhanvien_grantrevoke = new System.Windows.Forms.CheckBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.grantoptionkhamcc = new System.Windows.Forms.CheckBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.phongban_grantrevoke = new System.Windows.Forms.CheckBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.thuoc_revoke = new System.Windows.Forms.TabPage();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.kham_revoke = new System.Windows.Forms.TabPage();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.grantoptionkhamcc = new System.Windows.Forms.CheckBox();
+            this.phongban_revoke = new System.Windows.Forms.TabPage();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.phongban_grantrevoke = new System.Windows.Forms.CheckBox();
+            this.benhnhan_revoke = new System.Windows.Forms.TabPage();
+            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.dvkhambenh_revoke = new System.Windows.Forms.TabPage();
+            this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.dthuoc_revoke = new System.Windows.Forms.TabPage();
             this.checkedListBox7 = new System.Windows.Forms.CheckedListBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.ctdthuoc_revoke = new System.Windows.Forms.TabPage();
             this.checkedListBox8 = new System.Windows.Forms.CheckedListBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.sddv_revoke = new System.Windows.Forms.TabPage();
             this.checkedListBox9 = new System.Windows.Forms.CheckedListBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.userrevokename = new System.Windows.Forms.TextBox();
-            this.rolenamerevoke = new System.Windows.Forms.TextBox();
+            this.doituongrevoke = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.thuquyenuser = new System.Windows.Forms.RadioButton();
@@ -91,8 +91,9 @@ namespace atbm
             this.label10 = new System.Windows.Forms.Label();
             this.smallControl = new System.Windows.Forms.TabControl();
             this.nhanvien = new System.Windows.Forms.TabPage();
-            this.NHAN_VIEN = new System.Windows.Forms.CheckedListBox();
             this.grantNhanvien = new System.Windows.Forms.CheckBox();
+            this.thuoc = new System.Windows.Forms.TabPage();
+            this.grantoption_THUOC = new System.Windows.Forms.CheckBox();
             this.kham = new System.Windows.Forms.TabPage();
             this.colKHAM = new System.Windows.Forms.CheckedListBox();
             this.grantoption_KHAM = new System.Windows.Forms.CheckBox();
@@ -105,9 +106,6 @@ namespace atbm
             this.dichvukham = new System.Windows.Forms.TabPage();
             this.colDVUKHAM = new System.Windows.Forms.CheckedListBox();
             this.grantoption_dvkham = new System.Windows.Forms.CheckBox();
-            this.thuoc = new System.Windows.Forms.TabPage();
-            this.colTHUOC = new System.Windows.Forms.CheckedListBox();
-            this.grantoption_THUOC = new System.Windows.Forms.CheckBox();
             this.donthuoc = new System.Windows.Forms.TabPage();
             this.colDONTHUOC = new System.Windows.Forms.CheckedListBox();
             this.grantoption_DONTHUOC = new System.Windows.Forms.CheckBox();
@@ -168,21 +166,36 @@ namespace atbm
             this.timkiemuserrolelbl = new System.Windows.Forms.Label();
             this.timkiemuserroletb = new System.Windows.Forms.TextBox();
             this.bigtabcontrol = new System.Windows.Forms.TabControl();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.T_ID = new System.Windows.Forms.CheckBox();
+            this.T_TENTHUOC = new System.Windows.Forms.CheckBox();
+            this.T_HANG = new System.Windows.Forms.CheckBox();
+            this.T_DONGIA = new System.Windows.Forms.CheckBox();
+            this.NV_ID = new System.Windows.Forms.CheckBox();
+            this.NV_TEN = new System.Windows.Forms.CheckBox();
+            this.NV_NAMSINH = new System.Windows.Forms.CheckBox();
+            this.NV_DIACHI = new System.Windows.Forms.CheckBox();
+            this.NV_SDT = new System.Windows.Forms.CheckBox();
+            this.NV_LUONG = new System.Windows.Forms.CheckBox();
+            this.NV_LUONGCB = new System.Windows.Forms.CheckBox();
+            this.NV_LOAI = new System.Windows.Forms.CheckBox();
+            this.NV_SONGAYCONG = new System.Windows.Forms.CheckBox();
+            this.NV_PHUCAP = new System.Windows.Forms.CheckBox();
+            this.NV_PB = new System.Windows.Forms.CheckBox();
+            this.NV_CONLV = new System.Windows.Forms.CheckBox();
             this.thuhoiquyen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revokequyen_listquyen)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            this.nv_revoke.SuspendLayout();
+            this.thuoc_revoke.SuspendLayout();
+            this.kham_revoke.SuspendLayout();
+            this.phongban_revoke.SuspendLayout();
+            this.benhnhan_revoke.SuspendLayout();
+            this.dvkhambenh_revoke.SuspendLayout();
+            this.dthuoc_revoke.SuspendLayout();
+            this.ctdthuoc_revoke.SuspendLayout();
+            this.sddv_revoke.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.capquyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -190,11 +203,11 @@ namespace atbm
             this.cauquyengb.SuspendLayout();
             this.smallControl.SuspendLayout();
             this.nhanvien.SuspendLayout();
+            this.thuoc.SuspendLayout();
             this.kham.SuspendLayout();
             this.phongban.SuspendLayout();
             this.benhnhan.SuspendLayout();
             this.dichvukham.SuspendLayout();
-            this.thuoc.SuspendLayout();
             this.donthuoc.SuspendLayout();
             this.ctdonthuoc.SuspendLayout();
             this.sudungdv.SuspendLayout();
@@ -209,7 +222,6 @@ namespace atbm
             this.dsnguoidung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.bigtabcontrol.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // account
@@ -240,10 +252,8 @@ namespace atbm
             this.thuhoiquyen.Controls.Add(this.revokequyen_listquyen);
             this.thuhoiquyen.Controls.Add(this.revokequyen_btn);
             this.thuhoiquyen.Controls.Add(this.groupBox3);
-            this.thuhoiquyen.Controls.Add(this.label11);
             this.thuhoiquyen.Controls.Add(this.tabControl1);
-            this.thuhoiquyen.Controls.Add(this.userrevokename);
-            this.thuhoiquyen.Controls.Add(this.rolenamerevoke);
+            this.thuhoiquyen.Controls.Add(this.doituongrevoke);
             this.thuhoiquyen.Controls.Add(this.label12);
             this.thuhoiquyen.Controls.Add(this.groupBox2);
             this.thuhoiquyen.Location = new System.Drawing.Point(4, 25);
@@ -253,10 +263,32 @@ namespace atbm
             this.thuhoiquyen.Text = "Thu hồi quyền";
             this.thuhoiquyen.UseVisualStyleBackColor = true;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView3.Location = new System.Drawing.Point(689, 384);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(404, 186);
+            this.dataGridView3.TabIndex = 37;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(792, 333);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(206, 45);
+            this.button3.TabIndex = 36;
+            this.button3.Text = "Hiển thị danh sách quyền mức bảng";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(669, 13);
+            this.label13.Location = new System.Drawing.Point(475, 13);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 17);
@@ -265,7 +297,7 @@ namespace atbm
             // 
             // viewname_revokequyen
             // 
-            this.viewname_revokequyen.Location = new System.Drawing.Point(673, 33);
+            this.viewname_revokequyen.Location = new System.Drawing.Point(479, 33);
             this.viewname_revokequyen.Margin = new System.Windows.Forms.Padding(4);
             this.viewname_revokequyen.Name = "viewname_revokequyen";
             this.viewname_revokequyen.Size = new System.Drawing.Size(185, 22);
@@ -349,44 +381,34 @@ namespace atbm
             this.revokeselect.Text = "Select";
             this.revokeselect.UseVisualStyleBackColor = true;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(461, 13);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 17);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Tên người dùng";
-            // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Controls.Add(this.nv_revoke);
+            this.tabControl1.Controls.Add(this.thuoc_revoke);
+            this.tabControl1.Controls.Add(this.kham_revoke);
+            this.tabControl1.Controls.Add(this.phongban_revoke);
+            this.tabControl1.Controls.Add(this.benhnhan_revoke);
+            this.tabControl1.Controls.Add(this.dvkhambenh_revoke);
+            this.tabControl1.Controls.Add(this.dthuoc_revoke);
+            this.tabControl1.Controls.Add(this.ctdthuoc_revoke);
+            this.tabControl1.Controls.Add(this.sddv_revoke);
             this.tabControl1.Location = new System.Drawing.Point(21, 75);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(662, 340);
             this.tabControl1.TabIndex = 27;
             // 
-            // tabPage1
+            // nv_revoke
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.tabPage1.Controls.Add(this.checkedListBox1);
-            this.tabPage1.Controls.Add(this.nhanvien_grantrevoke);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(654, 311);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "NHANVIEN";
+            this.nv_revoke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.nv_revoke.Controls.Add(this.checkedListBox1);
+            this.nv_revoke.Controls.Add(this.nhanvien_grantrevoke);
+            this.nv_revoke.Location = new System.Drawing.Point(4, 25);
+            this.nv_revoke.Name = "nv_revoke";
+            this.nv_revoke.Padding = new System.Windows.Forms.Padding(3);
+            this.nv_revoke.Size = new System.Drawing.Size(654, 311);
+            this.nv_revoke.TabIndex = 0;
+            this.nv_revoke.Text = "NHANVIEN";
             // 
             // checkedListBox1
             // 
@@ -421,17 +443,54 @@ namespace atbm
             this.nhanvien_grantrevoke.Text = "With grant option";
             this.nhanvien_grantrevoke.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // thuoc_revoke
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage2.Controls.Add(this.checkedListBox2);
-            this.tabPage2.Controls.Add(this.grantoptionkhamcc);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(654, 311);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "KHAM";
+            this.thuoc_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.thuoc_revoke.Controls.Add(this.checkedListBox6);
+            this.thuoc_revoke.Controls.Add(this.checkBox6);
+            this.thuoc_revoke.Location = new System.Drawing.Point(4, 25);
+            this.thuoc_revoke.Name = "thuoc_revoke";
+            this.thuoc_revoke.Size = new System.Drawing.Size(654, 311);
+            this.thuoc_revoke.TabIndex = 5;
+            this.thuoc_revoke.Text = "THUOC";
+            // 
+            // checkedListBox6
+            // 
+            this.checkedListBox6.FormattingEnabled = true;
+            this.checkedListBox6.Items.AddRange(new object[] {
+            "T_ID",
+            "T_TENTHUOC",
+            "T_HANG",
+            "T_SLTON",
+            "T_DONGIA"});
+            this.checkedListBox6.Location = new System.Drawing.Point(417, 21);
+            this.checkedListBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.checkedListBox6.Name = "checkedListBox6";
+            this.checkedListBox6.Size = new System.Drawing.Size(171, 259);
+            this.checkedListBox6.TabIndex = 37;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(12, 254);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(138, 21);
+            this.checkBox6.TabIndex = 36;
+            this.checkBox6.Text = "With grant option";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // kham_revoke
+            // 
+            this.kham_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.kham_revoke.Controls.Add(this.checkedListBox2);
+            this.kham_revoke.Controls.Add(this.grantoptionkhamcc);
+            this.kham_revoke.Location = new System.Drawing.Point(4, 25);
+            this.kham_revoke.Name = "kham_revoke";
+            this.kham_revoke.Padding = new System.Windows.Forms.Padding(3);
+            this.kham_revoke.Size = new System.Drawing.Size(654, 311);
+            this.kham_revoke.TabIndex = 1;
+            this.kham_revoke.Text = "KHAM";
             // 
             // checkedListBox2
             // 
@@ -462,16 +521,16 @@ namespace atbm
             this.grantoptionkhamcc.Text = "With grant option";
             this.grantoptionkhamcc.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // phongban_revoke
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage3.Controls.Add(this.checkedListBox3);
-            this.tabPage3.Controls.Add(this.phongban_grantrevoke);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(654, 311);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "PHONGBAN";
+            this.phongban_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.phongban_revoke.Controls.Add(this.checkedListBox3);
+            this.phongban_revoke.Controls.Add(this.phongban_grantrevoke);
+            this.phongban_revoke.Location = new System.Drawing.Point(4, 25);
+            this.phongban_revoke.Name = "phongban_revoke";
+            this.phongban_revoke.Size = new System.Drawing.Size(654, 311);
+            this.phongban_revoke.TabIndex = 2;
+            this.phongban_revoke.Text = "PHONGBAN";
             // 
             // checkedListBox3
             // 
@@ -497,16 +556,16 @@ namespace atbm
             this.phongban_grantrevoke.Text = "With grant option";
             this.phongban_grantrevoke.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // benhnhan_revoke
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage4.Controls.Add(this.checkedListBox4);
-            this.tabPage4.Controls.Add(this.checkBox4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(654, 311);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "BENHNHAN";
+            this.benhnhan_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.benhnhan_revoke.Controls.Add(this.checkedListBox4);
+            this.benhnhan_revoke.Controls.Add(this.checkBox4);
+            this.benhnhan_revoke.Location = new System.Drawing.Point(4, 25);
+            this.benhnhan_revoke.Name = "benhnhan_revoke";
+            this.benhnhan_revoke.Size = new System.Drawing.Size(654, 311);
+            this.benhnhan_revoke.TabIndex = 3;
+            this.benhnhan_revoke.Text = "BENHNHAN";
             // 
             // checkedListBox4
             // 
@@ -534,16 +593,16 @@ namespace atbm
             this.checkBox4.Text = "With grant option";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // dvkhambenh_revoke
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage5.Controls.Add(this.checkedListBox5);
-            this.tabPage5.Controls.Add(this.checkBox5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(654, 311);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "DICH VU KHAM BENH";
+            this.dvkhambenh_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.dvkhambenh_revoke.Controls.Add(this.checkedListBox5);
+            this.dvkhambenh_revoke.Controls.Add(this.checkBox5);
+            this.dvkhambenh_revoke.Location = new System.Drawing.Point(4, 25);
+            this.dvkhambenh_revoke.Name = "dvkhambenh_revoke";
+            this.dvkhambenh_revoke.Size = new System.Drawing.Size(654, 311);
+            this.dvkhambenh_revoke.TabIndex = 4;
+            this.dvkhambenh_revoke.Text = "DICH VU KHAM BENH";
             // 
             // checkedListBox5
             // 
@@ -570,53 +629,16 @@ namespace atbm
             this.checkBox5.Text = "With grant option";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // dthuoc_revoke
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage6.Controls.Add(this.checkedListBox6);
-            this.tabPage6.Controls.Add(this.checkBox6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(654, 311);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "THUOC";
-            // 
-            // checkedListBox6
-            // 
-            this.checkedListBox6.FormattingEnabled = true;
-            this.checkedListBox6.Items.AddRange(new object[] {
-            "T_ID",
-            "T_TENTHUOC",
-            "T_HANG",
-            "T_SLTON",
-            "T_DONGIA"});
-            this.checkedListBox6.Location = new System.Drawing.Point(417, 21);
-            this.checkedListBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(171, 259);
-            this.checkedListBox6.TabIndex = 37;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(12, 254);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(138, 21);
-            this.checkBox6.TabIndex = 36;
-            this.checkBox6.Text = "With grant option";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage7.Controls.Add(this.checkedListBox7);
-            this.tabPage7.Controls.Add(this.checkBox7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(654, 311);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "DON THUOC";
+            this.dthuoc_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.dthuoc_revoke.Controls.Add(this.checkedListBox7);
+            this.dthuoc_revoke.Controls.Add(this.checkBox7);
+            this.dthuoc_revoke.Location = new System.Drawing.Point(4, 25);
+            this.dthuoc_revoke.Name = "dthuoc_revoke";
+            this.dthuoc_revoke.Size = new System.Drawing.Size(654, 311);
+            this.dthuoc_revoke.TabIndex = 6;
+            this.dthuoc_revoke.Text = "DON THUOC";
             // 
             // checkedListBox7
             // 
@@ -643,16 +665,16 @@ namespace atbm
             this.checkBox7.Text = "With grant option";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // tabPage8
+            // ctdthuoc_revoke
             // 
-            this.tabPage8.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage8.Controls.Add(this.checkedListBox8);
-            this.tabPage8.Controls.Add(this.checkBox8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(778, 311);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "CT_DONTHUOC";
+            this.ctdthuoc_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.ctdthuoc_revoke.Controls.Add(this.checkedListBox8);
+            this.ctdthuoc_revoke.Controls.Add(this.checkBox8);
+            this.ctdthuoc_revoke.Location = new System.Drawing.Point(4, 25);
+            this.ctdthuoc_revoke.Name = "ctdthuoc_revoke";
+            this.ctdthuoc_revoke.Size = new System.Drawing.Size(654, 311);
+            this.ctdthuoc_revoke.TabIndex = 7;
+            this.ctdthuoc_revoke.Text = "CT_DONTHUOC";
             // 
             // checkedListBox8
             // 
@@ -681,16 +703,16 @@ namespace atbm
             this.checkBox8.Text = "With grant option";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // tabPage9
+            // sddv_revoke
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.Turquoise;
-            this.tabPage9.Controls.Add(this.checkedListBox9);
-            this.tabPage9.Controls.Add(this.checkBox9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(778, 311);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "SUDUNGDV";
+            this.sddv_revoke.BackColor = System.Drawing.Color.Turquoise;
+            this.sddv_revoke.Controls.Add(this.checkedListBox9);
+            this.sddv_revoke.Controls.Add(this.checkBox9);
+            this.sddv_revoke.Location = new System.Drawing.Point(4, 25);
+            this.sddv_revoke.Name = "sddv_revoke";
+            this.sddv_revoke.Size = new System.Drawing.Size(654, 311);
+            this.sddv_revoke.TabIndex = 8;
+            this.sddv_revoke.Text = "SUDUNGDV";
             // 
             // checkedListBox9
             // 
@@ -718,21 +740,13 @@ namespace atbm
             this.checkBox9.Text = "With grant option";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // userrevokename
+            // doituongrevoke
             // 
-            this.userrevokename.Location = new System.Drawing.Point(465, 33);
-            this.userrevokename.Margin = new System.Windows.Forms.Padding(4);
-            this.userrevokename.Name = "userrevokename";
-            this.userrevokename.Size = new System.Drawing.Size(185, 22);
-            this.userrevokename.TabIndex = 15;
-            // 
-            // rolenamerevoke
-            // 
-            this.rolenamerevoke.Location = new System.Drawing.Point(247, 33);
-            this.rolenamerevoke.Margin = new System.Windows.Forms.Padding(4);
-            this.rolenamerevoke.Name = "rolenamerevoke";
-            this.rolenamerevoke.Size = new System.Drawing.Size(185, 22);
-            this.rolenamerevoke.TabIndex = 13;
+            this.doituongrevoke.Location = new System.Drawing.Point(247, 33);
+            this.doituongrevoke.Margin = new System.Windows.Forms.Padding(4);
+            this.doituongrevoke.Name = "doituongrevoke";
+            this.doituongrevoke.Size = new System.Drawing.Size(185, 22);
+            this.doituongrevoke.TabIndex = 13;
             // 
             // label12
             // 
@@ -740,9 +754,9 @@ namespace atbm
             this.label12.Location = new System.Drawing.Point(243, 13);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 17);
+            this.label12.Size = new System.Drawing.Size(96, 17);
             this.label12.TabIndex = 14;
-            this.label12.Text = "Tên role";
+            this.label12.Text = "Tên đối tượng";
             // 
             // groupBox2
             // 
@@ -936,11 +950,11 @@ namespace atbm
             // smallControl
             // 
             this.smallControl.Controls.Add(this.nhanvien);
+            this.smallControl.Controls.Add(this.thuoc);
             this.smallControl.Controls.Add(this.kham);
             this.smallControl.Controls.Add(this.phongban);
             this.smallControl.Controls.Add(this.benhnhan);
             this.smallControl.Controls.Add(this.dichvukham);
-            this.smallControl.Controls.Add(this.thuoc);
             this.smallControl.Controls.Add(this.donthuoc);
             this.smallControl.Controls.Add(this.ctdonthuoc);
             this.smallControl.Controls.Add(this.sudungdv);
@@ -953,7 +967,18 @@ namespace atbm
             // nhanvien
             // 
             this.nhanvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.nhanvien.Controls.Add(this.NHAN_VIEN);
+            this.nhanvien.Controls.Add(this.NV_CONLV);
+            this.nhanvien.Controls.Add(this.NV_PB);
+            this.nhanvien.Controls.Add(this.NV_PHUCAP);
+            this.nhanvien.Controls.Add(this.NV_SONGAYCONG);
+            this.nhanvien.Controls.Add(this.NV_LOAI);
+            this.nhanvien.Controls.Add(this.NV_LUONGCB);
+            this.nhanvien.Controls.Add(this.NV_LUONG);
+            this.nhanvien.Controls.Add(this.NV_SDT);
+            this.nhanvien.Controls.Add(this.NV_DIACHI);
+            this.nhanvien.Controls.Add(this.NV_NAMSINH);
+            this.nhanvien.Controls.Add(this.NV_TEN);
+            this.nhanvien.Controls.Add(this.NV_ID);
             this.nhanvien.Controls.Add(this.grantNhanvien);
             this.nhanvien.Location = new System.Drawing.Point(4, 25);
             this.nhanvien.Name = "nhanvien";
@@ -961,28 +986,6 @@ namespace atbm
             this.nhanvien.Size = new System.Drawing.Size(684, 311);
             this.nhanvien.TabIndex = 0;
             this.nhanvien.Text = "NHANVIEN";
-            // 
-            // NHAN_VIEN
-            // 
-            this.NHAN_VIEN.FormattingEnabled = true;
-            this.NHAN_VIEN.Items.AddRange(new object[] {
-            "NV_ID",
-            "NC_TEN",
-            "NV_NAMSINH",
-            "NV_DIACHI",
-            "NV_SDT",
-            "NV_LUONG",
-            "NV_LUONGCB",
-            "NV_LOAI",
-            "NV_SONGAYCONG",
-            "NV_PHUCAP",
-            "NV_PB",
-            "NV_CONLV"});
-            this.NHAN_VIEN.Location = new System.Drawing.Point(418, 29);
-            this.NHAN_VIEN.Margin = new System.Windows.Forms.Padding(4);
-            this.NHAN_VIEN.Name = "NHAN_VIEN";
-            this.NHAN_VIEN.Size = new System.Drawing.Size(171, 259);
-            this.NHAN_VIEN.TabIndex = 22;
             // 
             // grantNhanvien
             // 
@@ -994,6 +997,31 @@ namespace atbm
             this.grantNhanvien.TabIndex = 21;
             this.grantNhanvien.Text = "With grant option";
             this.grantNhanvien.UseVisualStyleBackColor = true;
+            // 
+            // thuoc
+            // 
+            this.thuoc.BackColor = System.Drawing.Color.Turquoise;
+            this.thuoc.Controls.Add(this.T_DONGIA);
+            this.thuoc.Controls.Add(this.T_HANG);
+            this.thuoc.Controls.Add(this.T_TENTHUOC);
+            this.thuoc.Controls.Add(this.T_ID);
+            this.thuoc.Controls.Add(this.grantoption_THUOC);
+            this.thuoc.Location = new System.Drawing.Point(4, 25);
+            this.thuoc.Name = "thuoc";
+            this.thuoc.Size = new System.Drawing.Size(684, 311);
+            this.thuoc.TabIndex = 5;
+            this.thuoc.Text = "THUOC";
+            // 
+            // grantoption_THUOC
+            // 
+            this.grantoption_THUOC.AutoSize = true;
+            this.grantoption_THUOC.Location = new System.Drawing.Point(12, 254);
+            this.grantoption_THUOC.Margin = new System.Windows.Forms.Padding(4);
+            this.grantoption_THUOC.Name = "grantoption_THUOC";
+            this.grantoption_THUOC.Size = new System.Drawing.Size(138, 21);
+            this.grantoption_THUOC.TabIndex = 36;
+            this.grantoption_THUOC.Text = "With grant option";
+            this.grantoption_THUOC.UseVisualStyleBackColor = true;
             // 
             // kham
             // 
@@ -1143,43 +1171,6 @@ namespace atbm
             this.grantoption_dvkham.TabIndex = 33;
             this.grantoption_dvkham.Text = "With grant option";
             this.grantoption_dvkham.UseVisualStyleBackColor = true;
-            // 
-            // thuoc
-            // 
-            this.thuoc.BackColor = System.Drawing.Color.Turquoise;
-            this.thuoc.Controls.Add(this.colTHUOC);
-            this.thuoc.Controls.Add(this.grantoption_THUOC);
-            this.thuoc.Location = new System.Drawing.Point(4, 25);
-            this.thuoc.Name = "thuoc";
-            this.thuoc.Size = new System.Drawing.Size(684, 311);
-            this.thuoc.TabIndex = 5;
-            this.thuoc.Text = "THUOC";
-            // 
-            // colTHUOC
-            // 
-            this.colTHUOC.FormattingEnabled = true;
-            this.colTHUOC.Items.AddRange(new object[] {
-            "T_ID",
-            "T_TENTHUOC",
-            "T_HANG",
-            "T_SLTON",
-            "T_DONGIA"});
-            this.colTHUOC.Location = new System.Drawing.Point(417, 21);
-            this.colTHUOC.Margin = new System.Windows.Forms.Padding(4);
-            this.colTHUOC.Name = "colTHUOC";
-            this.colTHUOC.Size = new System.Drawing.Size(171, 259);
-            this.colTHUOC.TabIndex = 37;
-            // 
-            // grantoption_THUOC
-            // 
-            this.grantoption_THUOC.AutoSize = true;
-            this.grantoption_THUOC.Location = new System.Drawing.Point(12, 254);
-            this.grantoption_THUOC.Margin = new System.Windows.Forms.Padding(4);
-            this.grantoption_THUOC.Name = "grantoption_THUOC";
-            this.grantoption_THUOC.Size = new System.Drawing.Size(138, 21);
-            this.grantoption_THUOC.TabIndex = 36;
-            this.grantoption_THUOC.Text = "With grant option";
-            this.grantoption_THUOC.UseVisualStyleBackColor = true;
             // 
             // donthuoc
             // 
@@ -1841,27 +1832,166 @@ namespace atbm
             this.bigtabcontrol.Size = new System.Drawing.Size(1117, 611);
             this.bigtabcontrol.TabIndex = 1;
             // 
-            // button3
+            // T_ID
             // 
-            this.button3.Location = new System.Drawing.Point(792, 333);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 45);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Hiển thị danh sách quyền mức bảng";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.T_ID.AutoSize = true;
+            this.T_ID.Location = new System.Drawing.Point(422, 47);
+            this.T_ID.Name = "T_ID";
+            this.T_ID.Size = new System.Drawing.Size(60, 21);
+            this.T_ID.TabIndex = 38;
+            this.T_ID.Text = "T_ID";
+            this.T_ID.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // T_TENTHUOC
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView3.Location = new System.Drawing.Point(689, 384);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(404, 186);
-            this.dataGridView3.TabIndex = 37;
+            this.T_TENTHUOC.AutoSize = true;
+            this.T_TENTHUOC.Location = new System.Drawing.Point(422, 74);
+            this.T_TENTHUOC.Name = "T_TENTHUOC";
+            this.T_TENTHUOC.Size = new System.Drawing.Size(124, 21);
+            this.T_TENTHUOC.TabIndex = 39;
+            this.T_TENTHUOC.Text = "T_TENTHUOC";
+            this.T_TENTHUOC.UseVisualStyleBackColor = true;
+            // 
+            // T_HANG
+            // 
+            this.T_HANG.AutoSize = true;
+            this.T_HANG.Location = new System.Drawing.Point(422, 101);
+            this.T_HANG.Name = "T_HANG";
+            this.T_HANG.Size = new System.Drawing.Size(87, 21);
+            this.T_HANG.TabIndex = 40;
+            this.T_HANG.Text = "T_HANG";
+            this.T_HANG.UseVisualStyleBackColor = true;
+            // 
+            // T_DONGIA
+            // 
+            this.T_DONGIA.AutoSize = true;
+            this.T_DONGIA.Location = new System.Drawing.Point(422, 128);
+            this.T_DONGIA.Name = "T_DONGIA";
+            this.T_DONGIA.Size = new System.Drawing.Size(101, 21);
+            this.T_DONGIA.TabIndex = 41;
+            this.T_DONGIA.Text = "T_DONGIA";
+            this.T_DONGIA.UseVisualStyleBackColor = true;
+            // 
+            // NV_ID
+            // 
+            this.NV_ID.AutoSize = true;
+            this.NV_ID.Location = new System.Drawing.Point(214, 24);
+            this.NV_ID.Name = "NV_ID";
+            this.NV_ID.Size = new System.Drawing.Size(70, 21);
+            this.NV_ID.TabIndex = 23;
+            this.NV_ID.Text = "NV_ID";
+            this.NV_ID.UseVisualStyleBackColor = true;
+            // 
+            // NV_TEN
+            // 
+            this.NV_TEN.AutoSize = true;
+            this.NV_TEN.Location = new System.Drawing.Point(214, 51);
+            this.NV_TEN.Name = "NV_TEN";
+            this.NV_TEN.Size = new System.Drawing.Size(85, 21);
+            this.NV_TEN.TabIndex = 24;
+            this.NV_TEN.Text = "NV_TEN";
+            this.NV_TEN.UseVisualStyleBackColor = true;
+            // 
+            // NV_NAMSINH
+            // 
+            this.NV_NAMSINH.AutoSize = true;
+            this.NV_NAMSINH.Location = new System.Drawing.Point(214, 78);
+            this.NV_NAMSINH.Name = "NV_NAMSINH";
+            this.NV_NAMSINH.Size = new System.Drawing.Size(119, 21);
+            this.NV_NAMSINH.TabIndex = 25;
+            this.NV_NAMSINH.Text = "NV_NAMSINH";
+            this.NV_NAMSINH.UseVisualStyleBackColor = true;
+            // 
+            // NV_DIACHI
+            // 
+            this.NV_DIACHI.AutoSize = true;
+            this.NV_DIACHI.Location = new System.Drawing.Point(214, 105);
+            this.NV_DIACHI.Name = "NV_DIACHI";
+            this.NV_DIACHI.Size = new System.Drawing.Size(101, 21);
+            this.NV_DIACHI.TabIndex = 26;
+            this.NV_DIACHI.Text = "NV_DIACHI";
+            this.NV_DIACHI.UseVisualStyleBackColor = true;
+            // 
+            // NV_SDT
+            // 
+            this.NV_SDT.AutoSize = true;
+            this.NV_SDT.Location = new System.Drawing.Point(214, 132);
+            this.NV_SDT.Name = "NV_SDT";
+            this.NV_SDT.Size = new System.Drawing.Size(85, 21);
+            this.NV_SDT.TabIndex = 27;
+            this.NV_SDT.Text = "NV_SDT";
+            this.NV_SDT.UseVisualStyleBackColor = true;
+            // 
+            // NV_LUONG
+            // 
+            this.NV_LUONG.AutoSize = true;
+            this.NV_LUONG.Location = new System.Drawing.Point(214, 159);
+            this.NV_LUONG.Name = "NV_LUONG";
+            this.NV_LUONG.Size = new System.Drawing.Size(107, 21);
+            this.NV_LUONG.TabIndex = 28;
+            this.NV_LUONG.Text = "NV_LUONG";
+            this.NV_LUONG.UseVisualStyleBackColor = true;
+            // 
+            // NV_LUONGCB
+            // 
+            this.NV_LUONGCB.AutoSize = true;
+            this.NV_LUONGCB.Location = new System.Drawing.Point(214, 186);
+            this.NV_LUONGCB.Name = "NV_LUONGCB";
+            this.NV_LUONGCB.Size = new System.Drawing.Size(125, 21);
+            this.NV_LUONGCB.TabIndex = 29;
+            this.NV_LUONGCB.Text = "NV_LUONGCB";
+            this.NV_LUONGCB.UseVisualStyleBackColor = true;
+            // 
+            // NV_LOAI
+            // 
+            this.NV_LOAI.AutoSize = true;
+            this.NV_LOAI.Location = new System.Drawing.Point(214, 213);
+            this.NV_LOAI.Name = "NV_LOAI";
+            this.NV_LOAI.Size = new System.Drawing.Size(88, 21);
+            this.NV_LOAI.TabIndex = 30;
+            this.NV_LOAI.Text = "NV_LOAI";
+            this.NV_LOAI.UseVisualStyleBackColor = true;
+            // 
+            // NV_SONGAYCONG
+            // 
+            this.NV_SONGAYCONG.AutoSize = true;
+            this.NV_SONGAYCONG.Location = new System.Drawing.Point(214, 240);
+            this.NV_SONGAYCONG.Name = "NV_SONGAYCONG";
+            this.NV_SONGAYCONG.Size = new System.Drawing.Size(157, 21);
+            this.NV_SONGAYCONG.TabIndex = 31;
+            this.NV_SONGAYCONG.Text = "NV_SONGAYCONG";
+            this.NV_SONGAYCONG.UseVisualStyleBackColor = true;
+            // 
+            // NV_PHUCAP
+            // 
+            this.NV_PHUCAP.AutoSize = true;
+            this.NV_PHUCAP.Location = new System.Drawing.Point(214, 267);
+            this.NV_PHUCAP.Name = "NV_PHUCAP";
+            this.NV_PHUCAP.Size = new System.Drawing.Size(113, 21);
+            this.NV_PHUCAP.TabIndex = 32;
+            this.NV_PHUCAP.Text = "NV_PHUCAP";
+            this.NV_PHUCAP.UseVisualStyleBackColor = true;
+            // 
+            // NV_PB
+            // 
+            this.NV_PB.AutoSize = true;
+            this.NV_PB.Location = new System.Drawing.Point(350, 24);
+            this.NV_PB.Name = "NV_PB";
+            this.NV_PB.Size = new System.Drawing.Size(75, 21);
+            this.NV_PB.TabIndex = 33;
+            this.NV_PB.Text = "NV_PB";
+            this.NV_PB.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.NV_PB.UseVisualStyleBackColor = true;
+            // 
+            // NV_CONLV
+            // 
+            this.NV_CONLV.AutoSize = true;
+            this.NV_CONLV.Location = new System.Drawing.Point(350, 51);
+            this.NV_CONLV.Name = "NV_CONLV";
+            this.NV_CONLV.Size = new System.Drawing.Size(104, 21);
+            this.NV_CONLV.TabIndex = 34;
+            this.NV_CONLV.Text = "NV_CONLV";
+            this.NV_CONLV.UseVisualStyleBackColor = true;
             // 
             // admin
             // 
@@ -1874,27 +2004,28 @@ namespace atbm
             this.Text = "Admin";
             this.thuhoiquyen.ResumeLayout(false);
             this.thuhoiquyen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.revokequyen_listquyen)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
+            this.nv_revoke.ResumeLayout(false);
+            this.nv_revoke.PerformLayout();
+            this.thuoc_revoke.ResumeLayout(false);
+            this.thuoc_revoke.PerformLayout();
+            this.kham_revoke.ResumeLayout(false);
+            this.kham_revoke.PerformLayout();
+            this.phongban_revoke.ResumeLayout(false);
+            this.phongban_revoke.PerformLayout();
+            this.benhnhan_revoke.ResumeLayout(false);
+            this.benhnhan_revoke.PerformLayout();
+            this.dvkhambenh_revoke.ResumeLayout(false);
+            this.dvkhambenh_revoke.PerformLayout();
+            this.dthuoc_revoke.ResumeLayout(false);
+            this.dthuoc_revoke.PerformLayout();
+            this.ctdthuoc_revoke.ResumeLayout(false);
+            this.ctdthuoc_revoke.PerformLayout();
+            this.sddv_revoke.ResumeLayout(false);
+            this.sddv_revoke.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.capquyen.ResumeLayout(false);
@@ -1905,6 +2036,8 @@ namespace atbm
             this.smallControl.ResumeLayout(false);
             this.nhanvien.ResumeLayout(false);
             this.nhanvien.PerformLayout();
+            this.thuoc.ResumeLayout(false);
+            this.thuoc.PerformLayout();
             this.kham.ResumeLayout(false);
             this.kham.PerformLayout();
             this.phongban.ResumeLayout(false);
@@ -1913,8 +2046,6 @@ namespace atbm
             this.benhnhan.PerformLayout();
             this.dichvukham.ResumeLayout(false);
             this.dichvukham.PerformLayout();
-            this.thuoc.ResumeLayout(false);
-            this.thuoc.PerformLayout();
             this.donthuoc.ResumeLayout(false);
             this.donthuoc.PerformLayout();
             this.ctdonthuoc.ResumeLayout(false);
@@ -1938,7 +2069,6 @@ namespace atbm
             this.dsnguoidung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.bigtabcontrol.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1954,37 +2084,35 @@ namespace atbm
         private System.Windows.Forms.Button revokedelete;
         private System.Windows.Forms.Button revokeinsert;
         private System.Windows.Forms.Button revokeselect;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage nv_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.CheckBox nhanvien_grantrevoke;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage kham_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.CheckBox grantoptionkhamcc;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage phongban_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox3;
         private System.Windows.Forms.CheckBox phongban_grantrevoke;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage benhnhan_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox4;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage dvkhambenh_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox5;
         private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage thuoc_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox6;
         private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage dthuoc_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox7;
         private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage ctdthuoc_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox8;
         private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage sddv_revoke;
         private System.Windows.Forms.CheckedListBox checkedListBox9;
         private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.TextBox userrevokename;
-        private System.Windows.Forms.TextBox rolenamerevoke;
+        private System.Windows.Forms.TextBox doituongrevoke;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton thuquyenuser;
@@ -1998,7 +2126,6 @@ namespace atbm
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabControl smallControl;
         private System.Windows.Forms.TabPage nhanvien;
-        private System.Windows.Forms.CheckedListBox NHAN_VIEN;
         private System.Windows.Forms.CheckBox grantNhanvien;
         private System.Windows.Forms.TabPage kham;
         private System.Windows.Forms.CheckedListBox colKHAM;
@@ -2013,7 +2140,6 @@ namespace atbm
         private System.Windows.Forms.CheckedListBox colDVUKHAM;
         private System.Windows.Forms.CheckBox grantoption_dvkham;
         private System.Windows.Forms.TabPage thuoc;
-        private System.Windows.Forms.CheckedListBox colTHUOC;
         private System.Windows.Forms.CheckBox grantoption_THUOC;
         private System.Windows.Forms.TabPage donthuoc;
         private System.Windows.Forms.CheckedListBox colDONTHUOC;
@@ -2087,6 +2213,22 @@ namespace atbm
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.CheckBox T_ID;
+        private System.Windows.Forms.CheckBox T_TENTHUOC;
+        private System.Windows.Forms.CheckBox T_HANG;
+        private System.Windows.Forms.CheckBox T_DONGIA;
+        private System.Windows.Forms.CheckBox NV_ID;
+        private System.Windows.Forms.CheckBox NV_CONLV;
+        private System.Windows.Forms.CheckBox NV_PB;
+        private System.Windows.Forms.CheckBox NV_PHUCAP;
+        private System.Windows.Forms.CheckBox NV_SONGAYCONG;
+        private System.Windows.Forms.CheckBox NV_LOAI;
+        private System.Windows.Forms.CheckBox NV_LUONGCB;
+        private System.Windows.Forms.CheckBox NV_LUONG;
+        private System.Windows.Forms.CheckBox NV_SDT;
+        private System.Windows.Forms.CheckBox NV_DIACHI;
+        private System.Windows.Forms.CheckBox NV_NAMSINH;
+        private System.Windows.Forms.CheckBox NV_TEN;
     }
 }
 
