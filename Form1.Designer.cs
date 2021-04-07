@@ -32,6 +32,8 @@ namespace atbm
             this.account = new System.Windows.Forms.Label();
             this.audit = new System.Windows.Forms.TabPage();
             this.thuhoiquyen = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.viewname_revokequyen = new System.Windows.Forms.TextBox();
             this.revokequyen_listquyen = new System.Windows.Forms.DataGridView();
             this.revokequyen_btn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -75,6 +77,10 @@ namespace atbm
             this.thuquyenuser = new System.Windows.Forms.RadioButton();
             this.thuquyenrole = new System.Windows.Forms.RadioButton();
             this.capquyen = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.viewinputname_capquyen = new System.Windows.Forms.TextBox();
             this.grantquyen_listquyen = new System.Windows.Forms.DataGridView();
             this.grantquyen_btn = new System.Windows.Forms.Button();
             this.cauquyengb = new System.Windows.Forms.GroupBox();
@@ -118,7 +124,6 @@ namespace atbm
             this.capquyenuserrb = new System.Windows.Forms.RadioButton();
             this.capquyenrolerb = new System.Windows.Forms.RadioButton();
             this.quanly = new System.Windows.Forms.TabPage();
-            this.quanly_grantoption = new System.Windows.Forms.CheckBox();
             this.caproleforuser = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.grantrole_rolepassif = new System.Windows.Forms.TextBox();
@@ -128,6 +133,7 @@ namespace atbm
             this.grantrole_rolename = new System.Windows.Forms.TextBox();
             this.caprole = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.quanly_user_quota = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -162,7 +168,8 @@ namespace atbm
             this.timkiemuserrolelbl = new System.Windows.Forms.Label();
             this.timkiemuserroletb = new System.Windows.Forms.TextBox();
             this.bigtabcontrol = new System.Windows.Forms.TabControl();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.thuhoiquyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.revokequyen_listquyen)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -178,6 +185,7 @@ namespace atbm
             this.tabPage9.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.capquyen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grantquyen_listquyen)).BeginInit();
             this.cauquyengb.SuspendLayout();
             this.smallControl.SuspendLayout();
@@ -201,6 +209,7 @@ namespace atbm
             this.dsnguoidung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.bigtabcontrol.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // account
@@ -217,13 +226,17 @@ namespace atbm
             // 
             this.audit.Location = new System.Drawing.Point(4, 25);
             this.audit.Name = "audit";
-            this.audit.Size = new System.Drawing.Size(1109, 516);
+            this.audit.Size = new System.Drawing.Size(1109, 582);
             this.audit.TabIndex = 7;
             this.audit.Text = "Audit";
             this.audit.UseVisualStyleBackColor = true;
             // 
             // thuhoiquyen
             // 
+            this.thuhoiquyen.Controls.Add(this.dataGridView3);
+            this.thuhoiquyen.Controls.Add(this.button3);
+            this.thuhoiquyen.Controls.Add(this.label13);
+            this.thuhoiquyen.Controls.Add(this.viewname_revokequyen);
             this.thuhoiquyen.Controls.Add(this.revokequyen_listquyen);
             this.thuhoiquyen.Controls.Add(this.revokequyen_btn);
             this.thuhoiquyen.Controls.Add(this.groupBox3);
@@ -235,31 +248,50 @@ namespace atbm
             this.thuhoiquyen.Controls.Add(this.groupBox2);
             this.thuhoiquyen.Location = new System.Drawing.Point(4, 25);
             this.thuhoiquyen.Name = "thuhoiquyen";
-            this.thuhoiquyen.Size = new System.Drawing.Size(1109, 516);
+            this.thuhoiquyen.Size = new System.Drawing.Size(1109, 582);
             this.thuhoiquyen.TabIndex = 4;
             this.thuhoiquyen.Text = "Thu hồi quyền";
             this.thuhoiquyen.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(669, 13);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 17);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Tên view";
+            // 
+            // viewname_revokequyen
+            // 
+            this.viewname_revokequyen.Location = new System.Drawing.Point(673, 33);
+            this.viewname_revokequyen.Margin = new System.Windows.Forms.Padding(4);
+            this.viewname_revokequyen.Name = "viewname_revokequyen";
+            this.viewname_revokequyen.Size = new System.Drawing.Size(185, 22);
+            this.viewname_revokequyen.TabIndex = 34;
             // 
             // revokequyen_listquyen
             // 
             this.revokequyen_listquyen.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.revokequyen_listquyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.revokequyen_listquyen.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.revokequyen_listquyen.Location = new System.Drawing.Point(824, 100);
+            this.revokequyen_listquyen.Location = new System.Drawing.Point(689, 113);
             this.revokequyen_listquyen.Name = "revokequyen_listquyen";
             this.revokequyen_listquyen.RowHeadersWidth = 51;
             this.revokequyen_listquyen.RowTemplate.Height = 24;
-            this.revokequyen_listquyen.Size = new System.Drawing.Size(272, 402);
+            this.revokequyen_listquyen.Size = new System.Drawing.Size(404, 214);
             this.revokequyen_listquyen.TabIndex = 29;
             // 
             // revokequyen_btn
             // 
-            this.revokequyen_btn.Location = new System.Drawing.Point(865, 17);
+            this.revokequyen_btn.Location = new System.Drawing.Point(811, 62);
             this.revokequyen_btn.Name = "revokequyen_btn";
             this.revokequyen_btn.Size = new System.Drawing.Size(206, 45);
             this.revokequyen_btn.TabIndex = 28;
-            this.revokequyen_btn.Text = "Hiển thị danh sách tất cả các quyền";
+            this.revokequyen_btn.Text = "Hiển thị danh sách quyền mức cột";
             this.revokequyen_btn.UseVisualStyleBackColor = true;
+            this.revokequyen_btn.Click += new System.EventHandler(this.revokequyen_btn_Click);
             // 
             // groupBox3
             // 
@@ -305,6 +337,7 @@ namespace atbm
             this.revokeinsert.TabIndex = 15;
             this.revokeinsert.Text = "Insert";
             this.revokeinsert.UseVisualStyleBackColor = true;
+            this.revokeinsert.Click += new System.EventHandler(this.revokeinsert_Click);
             // 
             // revokeselect
             // 
@@ -319,7 +352,7 @@ namespace atbm
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(586, 13);
+            this.label11.Location = new System.Drawing.Point(461, 13);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(108, 17);
@@ -340,7 +373,7 @@ namespace atbm
             this.tabControl1.Location = new System.Drawing.Point(21, 75);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(786, 340);
+            this.tabControl1.Size = new System.Drawing.Size(662, 340);
             this.tabControl1.TabIndex = 27;
             // 
             // tabPage1
@@ -351,7 +384,7 @@ namespace atbm
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(778, 311);
+            this.tabPage1.Size = new System.Drawing.Size(654, 311);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "NHANVIEN";
             // 
@@ -371,7 +404,7 @@ namespace atbm
             "NV_PHUCAP",
             "NV_PB",
             "NV_CONLV"});
-            this.checkedListBox1.Location = new System.Drawing.Point(421, 34);
+            this.checkedListBox1.Location = new System.Drawing.Point(352, 29);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(171, 259);
@@ -396,7 +429,7 @@ namespace atbm
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(778, 311);
+            this.tabPage2.Size = new System.Drawing.Size(654, 311);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "KHAM";
             // 
@@ -436,7 +469,7 @@ namespace atbm
             this.tabPage3.Controls.Add(this.phongban_grantrevoke);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(778, 311);
+            this.tabPage3.Size = new System.Drawing.Size(654, 311);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "PHONGBAN";
             // 
@@ -471,7 +504,7 @@ namespace atbm
             this.tabPage4.Controls.Add(this.checkBox4);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(778, 311);
+            this.tabPage4.Size = new System.Drawing.Size(654, 311);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "BENHNHAN";
             // 
@@ -508,7 +541,7 @@ namespace atbm
             this.tabPage5.Controls.Add(this.checkBox5);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(778, 311);
+            this.tabPage5.Size = new System.Drawing.Size(654, 311);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "DICH VU KHAM BENH";
             // 
@@ -544,7 +577,7 @@ namespace atbm
             this.tabPage6.Controls.Add(this.checkBox6);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(778, 311);
+            this.tabPage6.Size = new System.Drawing.Size(654, 311);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "THUOC";
             // 
@@ -581,7 +614,7 @@ namespace atbm
             this.tabPage7.Controls.Add(this.checkBox7);
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(778, 311);
+            this.tabPage7.Size = new System.Drawing.Size(654, 311);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "DON THUOC";
             // 
@@ -687,7 +720,7 @@ namespace atbm
             // 
             // userrevokename
             // 
-            this.userrevokename.Location = new System.Drawing.Point(590, 33);
+            this.userrevokename.Location = new System.Drawing.Point(465, 33);
             this.userrevokename.Margin = new System.Windows.Forms.Padding(4);
             this.userrevokename.Name = "userrevokename";
             this.userrevokename.Size = new System.Drawing.Size(185, 22);
@@ -695,7 +728,7 @@ namespace atbm
             // 
             // rolenamerevoke
             // 
-            this.rolenamerevoke.Location = new System.Drawing.Point(319, 33);
+            this.rolenamerevoke.Location = new System.Drawing.Point(247, 33);
             this.rolenamerevoke.Margin = new System.Windows.Forms.Padding(4);
             this.rolenamerevoke.Name = "rolenamerevoke";
             this.rolenamerevoke.Size = new System.Drawing.Size(185, 22);
@@ -704,7 +737,7 @@ namespace atbm
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(315, 13);
+            this.label12.Location = new System.Drawing.Point(243, 13);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 17);
@@ -750,6 +783,10 @@ namespace atbm
             // 
             // capquyen
             // 
+            this.capquyen.Controls.Add(this.dataGridView2);
+            this.capquyen.Controls.Add(this.button2);
+            this.capquyen.Controls.Add(this.label3);
+            this.capquyen.Controls.Add(this.viewinputname_capquyen);
             this.capquyen.Controls.Add(this.grantquyen_listquyen);
             this.capquyen.Controls.Add(this.grantquyen_btn);
             this.capquyen.Controls.Add(this.cauquyengb);
@@ -761,31 +798,74 @@ namespace atbm
             this.capquyen.Controls.Add(this.doituongcancapquyengb);
             this.capquyen.Location = new System.Drawing.Point(4, 25);
             this.capquyen.Name = "capquyen";
-            this.capquyen.Size = new System.Drawing.Size(1109, 516);
+            this.capquyen.Size = new System.Drawing.Size(1109, 582);
             this.capquyen.TabIndex = 3;
             this.capquyen.Text = "Cấp quyền";
             this.capquyen.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView2.Location = new System.Drawing.Point(714, 366);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(388, 204);
+            this.dataGridView2.TabIndex = 35;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.Location = new System.Drawing.Point(827, 306);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 45);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Hiển thị quyền mức bảng";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(648, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 17);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Tên view";
+            // 
+            // viewinputname_capquyen
+            // 
+            this.viewinputname_capquyen.Location = new System.Drawing.Point(652, 31);
+            this.viewinputname_capquyen.Margin = new System.Windows.Forms.Padding(4);
+            this.viewinputname_capquyen.Name = "viewinputname_capquyen";
+            this.viewinputname_capquyen.Size = new System.Drawing.Size(185, 22);
+            this.viewinputname_capquyen.TabIndex = 32;
             // 
             // grantquyen_listquyen
             // 
             this.grantquyen_listquyen.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.grantquyen_listquyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grantquyen_listquyen.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.grantquyen_listquyen.Location = new System.Drawing.Point(812, 96);
+            this.grantquyen_listquyen.Location = new System.Drawing.Point(718, 96);
             this.grantquyen_listquyen.Name = "grantquyen_listquyen";
             this.grantquyen_listquyen.RowHeadersWidth = 51;
             this.grantquyen_listquyen.RowTemplate.Height = 24;
-            this.grantquyen_listquyen.Size = new System.Drawing.Size(272, 402);
+            this.grantquyen_listquyen.Size = new System.Drawing.Size(384, 204);
             this.grantquyen_listquyen.TabIndex = 31;
             // 
             // grantquyen_btn
             // 
-            this.grantquyen_btn.Location = new System.Drawing.Point(847, 42);
+            this.grantquyen_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grantquyen_btn.Location = new System.Drawing.Point(858, 45);
             this.grantquyen_btn.Name = "grantquyen_btn";
             this.grantquyen_btn.Size = new System.Drawing.Size(206, 45);
             this.grantquyen_btn.TabIndex = 30;
-            this.grantquyen_btn.Text = "Hiển thị danh sách tất cả các quyền";
-            this.grantquyen_btn.UseVisualStyleBackColor = true;
+            this.grantquyen_btn.Text = "Hiển thị quyền mức cột";
+            this.grantquyen_btn.UseVisualStyleBackColor = false;
+            this.grantquyen_btn.Click += new System.EventHandler(this.grantquyen_btn_Click);
             // 
             // cauquyengb
             // 
@@ -841,11 +921,12 @@ namespace atbm
             this.selectbtn.TabIndex = 14;
             this.selectbtn.Text = "Select";
             this.selectbtn.UseVisualStyleBackColor = true;
+            this.selectbtn.Click += new System.EventHandler(this.selectbtn_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(540, 22);
+            this.label10.Location = new System.Drawing.Point(439, 11);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 17);
@@ -866,7 +947,7 @@ namespace atbm
             this.smallControl.Location = new System.Drawing.Point(20, 71);
             this.smallControl.Name = "smallControl";
             this.smallControl.SelectedIndex = 0;
-            this.smallControl.Size = new System.Drawing.Size(786, 340);
+            this.smallControl.Size = new System.Drawing.Size(692, 340);
             this.smallControl.TabIndex = 13;
             // 
             // nhanvien
@@ -877,7 +958,7 @@ namespace atbm
             this.nhanvien.Location = new System.Drawing.Point(4, 25);
             this.nhanvien.Name = "nhanvien";
             this.nhanvien.Padding = new System.Windows.Forms.Padding(3);
-            this.nhanvien.Size = new System.Drawing.Size(778, 311);
+            this.nhanvien.Size = new System.Drawing.Size(684, 311);
             this.nhanvien.TabIndex = 0;
             this.nhanvien.Text = "NHANVIEN";
             // 
@@ -897,7 +978,7 @@ namespace atbm
             "NV_PHUCAP",
             "NV_PB",
             "NV_CONLV"});
-            this.NHAN_VIEN.Location = new System.Drawing.Point(589, 29);
+            this.NHAN_VIEN.Location = new System.Drawing.Point(418, 29);
             this.NHAN_VIEN.Margin = new System.Windows.Forms.Padding(4);
             this.NHAN_VIEN.Name = "NHAN_VIEN";
             this.NHAN_VIEN.Size = new System.Drawing.Size(171, 259);
@@ -922,7 +1003,7 @@ namespace atbm
             this.kham.Location = new System.Drawing.Point(4, 25);
             this.kham.Name = "kham";
             this.kham.Padding = new System.Windows.Forms.Padding(3);
-            this.kham.Size = new System.Drawing.Size(778, 311);
+            this.kham.Size = new System.Drawing.Size(684, 311);
             this.kham.TabIndex = 1;
             this.kham.Text = "KHAM";
             // 
@@ -938,7 +1019,7 @@ namespace atbm
             "KH_IDBN",
             "KH_TONGTIEN",
             "KH_BSKHAM"});
-            this.colKHAM.Location = new System.Drawing.Point(418, 24);
+            this.colKHAM.Location = new System.Drawing.Point(202, 19);
             this.colKHAM.Margin = new System.Windows.Forms.Padding(4);
             this.colKHAM.Name = "colKHAM";
             this.colKHAM.Size = new System.Drawing.Size(171, 259);
@@ -962,7 +1043,7 @@ namespace atbm
             this.phongban.Controls.Add(this.grantoption_phong);
             this.phongban.Location = new System.Drawing.Point(4, 25);
             this.phongban.Name = "phongban";
-            this.phongban.Size = new System.Drawing.Size(778, 311);
+            this.phongban.Size = new System.Drawing.Size(684, 311);
             this.phongban.TabIndex = 2;
             this.phongban.Text = "PHONGBAN";
             // 
@@ -997,7 +1078,7 @@ namespace atbm
             this.benhnhan.Controls.Add(this.grant_bnhan);
             this.benhnhan.Location = new System.Drawing.Point(4, 25);
             this.benhnhan.Name = "benhnhan";
-            this.benhnhan.Size = new System.Drawing.Size(778, 311);
+            this.benhnhan.Size = new System.Drawing.Size(684, 311);
             this.benhnhan.TabIndex = 3;
             this.benhnhan.Text = "BENHNHAN";
             // 
@@ -1034,7 +1115,7 @@ namespace atbm
             this.dichvukham.Controls.Add(this.grantoption_dvkham);
             this.dichvukham.Location = new System.Drawing.Point(4, 25);
             this.dichvukham.Name = "dichvukham";
-            this.dichvukham.Size = new System.Drawing.Size(778, 311);
+            this.dichvukham.Size = new System.Drawing.Size(684, 311);
             this.dichvukham.TabIndex = 4;
             this.dichvukham.Text = "DICH VU KHAM BENH";
             // 
@@ -1070,7 +1151,7 @@ namespace atbm
             this.thuoc.Controls.Add(this.grantoption_THUOC);
             this.thuoc.Location = new System.Drawing.Point(4, 25);
             this.thuoc.Name = "thuoc";
-            this.thuoc.Size = new System.Drawing.Size(778, 311);
+            this.thuoc.Size = new System.Drawing.Size(684, 311);
             this.thuoc.TabIndex = 5;
             this.thuoc.Text = "THUOC";
             // 
@@ -1107,7 +1188,7 @@ namespace atbm
             this.donthuoc.Controls.Add(this.grantoption_DONTHUOC);
             this.donthuoc.Location = new System.Drawing.Point(4, 25);
             this.donthuoc.Name = "donthuoc";
-            this.donthuoc.Size = new System.Drawing.Size(778, 311);
+            this.donthuoc.Size = new System.Drawing.Size(684, 311);
             this.donthuoc.TabIndex = 6;
             this.donthuoc.Text = "DON THUOC";
             // 
@@ -1143,7 +1224,7 @@ namespace atbm
             this.ctdonthuoc.Controls.Add(this.grantoption_CTdonthuoc);
             this.ctdonthuoc.Location = new System.Drawing.Point(4, 25);
             this.ctdonthuoc.Name = "ctdonthuoc";
-            this.ctdonthuoc.Size = new System.Drawing.Size(778, 311);
+            this.ctdonthuoc.Size = new System.Drawing.Size(684, 311);
             this.ctdonthuoc.TabIndex = 7;
             this.ctdonthuoc.Text = "CT_DONTHUOC";
             // 
@@ -1181,7 +1262,7 @@ namespace atbm
             this.sudungdv.Controls.Add(this.grantoption_SUDUNGDV);
             this.sudungdv.Location = new System.Drawing.Point(4, 25);
             this.sudungdv.Name = "sudungdv";
-            this.sudungdv.Size = new System.Drawing.Size(778, 311);
+            this.sudungdv.Size = new System.Drawing.Size(684, 311);
             this.sudungdv.TabIndex = 8;
             this.sudungdv.Text = "SUDUNGDV";
             // 
@@ -1213,7 +1294,7 @@ namespace atbm
             // 
             // capquyen_user_name
             // 
-            this.capquyen_user_name.Location = new System.Drawing.Point(544, 42);
+            this.capquyen_user_name.Location = new System.Drawing.Point(443, 31);
             this.capquyen_user_name.Margin = new System.Windows.Forms.Padding(4);
             this.capquyen_user_name.Name = "capquyen_user_name";
             this.capquyen_user_name.Size = new System.Drawing.Size(185, 22);
@@ -1221,7 +1302,7 @@ namespace atbm
             // 
             // capquyen_role_name
             // 
-            this.capquyen_role_name.Location = new System.Drawing.Point(270, 42);
+            this.capquyen_role_name.Location = new System.Drawing.Point(238, 32);
             this.capquyen_role_name.Margin = new System.Windows.Forms.Padding(4);
             this.capquyen_role_name.Name = "capquyen_role_name";
             this.capquyen_role_name.Size = new System.Drawing.Size(185, 22);
@@ -1230,7 +1311,7 @@ namespace atbm
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(267, 21);
+            this.label9.Location = new System.Drawing.Point(235, 11);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 17);
@@ -1281,25 +1362,13 @@ namespace atbm
             this.quanly.Controls.Add(this.rolegb);
             this.quanly.Location = new System.Drawing.Point(4, 25);
             this.quanly.Name = "quanly";
-            this.quanly.Size = new System.Drawing.Size(1109, 516);
+            this.quanly.Size = new System.Drawing.Size(1109, 582);
             this.quanly.TabIndex = 2;
             this.quanly.Text = "Quản lý user/role";
             this.quanly.UseVisualStyleBackColor = true;
             // 
-            // quanly_grantoption
-            // 
-            this.quanly_grantoption.AutoSize = true;
-            this.quanly_grantoption.Location = new System.Drawing.Point(8, 137);
-            this.quanly_grantoption.Margin = new System.Windows.Forms.Padding(4);
-            this.quanly_grantoption.Name = "quanly_grantoption";
-            this.quanly_grantoption.Size = new System.Drawing.Size(138, 21);
-            this.quanly_grantoption.TabIndex = 20;
-            this.quanly_grantoption.Text = "With grant option";
-            this.quanly_grantoption.UseVisualStyleBackColor = true;
-            // 
             // caproleforuser
             // 
-            this.caproleforuser.Controls.Add(this.quanly_grantoption);
             this.caproleforuser.Controls.Add(this.label15);
             this.caproleforuser.Controls.Add(this.grantrole_rolepassif);
             this.caproleforuser.Controls.Add(this.quanly_assignforuser);
@@ -1372,7 +1441,7 @@ namespace atbm
             // 
             // caprole
             // 
-            this.caprole.Location = new System.Drawing.Point(348, 68);
+            this.caprole.Location = new System.Drawing.Point(334, 107);
             this.caprole.Margin = new System.Windows.Forms.Padding(4);
             this.caprole.Name = "caprole";
             this.caprole.Size = new System.Drawing.Size(109, 28);
@@ -1403,6 +1472,18 @@ namespace atbm
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Người dùng";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(859, 95);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 47);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Cập nhật quota cho tablespace";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -1610,7 +1691,7 @@ namespace atbm
             this.thongtinquyen.Location = new System.Drawing.Point(4, 25);
             this.thongtinquyen.Name = "thongtinquyen";
             this.thongtinquyen.Padding = new System.Windows.Forms.Padding(3);
-            this.thongtinquyen.Size = new System.Drawing.Size(1109, 516);
+            this.thongtinquyen.Size = new System.Drawing.Size(1109, 582);
             this.thongtinquyen.TabIndex = 1;
             this.thongtinquyen.Text = "Thông tin về quyền";
             this.thongtinquyen.UseVisualStyleBackColor = true;
@@ -1633,7 +1714,7 @@ namespace atbm
             this.searchuserquyen.Name = "searchuserquyen";
             this.searchuserquyen.RowHeadersWidth = 51;
             this.searchuserquyen.RowTemplate.Height = 24;
-            this.searchuserquyen.Size = new System.Drawing.Size(451, 378);
+            this.searchuserquyen.Size = new System.Drawing.Size(451, 444);
             this.searchuserquyen.TabIndex = 16;
             // 
             // searchquyenrole
@@ -1643,7 +1724,7 @@ namespace atbm
             this.searchquyenrole.Name = "searchquyenrole";
             this.searchquyenrole.RowHeadersWidth = 51;
             this.searchquyenrole.RowTemplate.Height = 24;
-            this.searchquyenrole.Size = new System.Drawing.Size(468, 378);
+            this.searchquyenrole.Size = new System.Drawing.Size(468, 444);
             this.searchquyenrole.TabIndex = 15;
             // 
             // inforquyen_role
@@ -1702,7 +1783,7 @@ namespace atbm
             this.dsnguoidung.Location = new System.Drawing.Point(4, 25);
             this.dsnguoidung.Name = "dsnguoidung";
             this.dsnguoidung.Padding = new System.Windows.Forms.Padding(3);
-            this.dsnguoidung.Size = new System.Drawing.Size(1109, 516);
+            this.dsnguoidung.Size = new System.Drawing.Size(1109, 582);
             this.dsnguoidung.TabIndex = 0;
             this.dsnguoidung.Text = "Danh sách user";
             this.dsnguoidung.UseVisualStyleBackColor = true;
@@ -1714,7 +1795,7 @@ namespace atbm
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(963, 452);
+            this.dataGridView1.Size = new System.Drawing.Size(1076, 518);
             this.dataGridView1.TabIndex = 8;
             // 
             // userlist_search
@@ -1757,25 +1838,36 @@ namespace atbm
             this.bigtabcontrol.Location = new System.Drawing.Point(12, 49);
             this.bigtabcontrol.Name = "bigtabcontrol";
             this.bigtabcontrol.SelectedIndex = 0;
-            this.bigtabcontrol.Size = new System.Drawing.Size(1117, 545);
+            this.bigtabcontrol.Size = new System.Drawing.Size(1117, 611);
             this.bigtabcontrol.TabIndex = 1;
             // 
-            // button1
+            // button3
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(859, 95);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 47);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Cập nhật quota cho tablespace";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button3.Location = new System.Drawing.Point(792, 333);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(206, 45);
+            this.button3.TabIndex = 36;
+            this.button3.Text = "Hiển thị danh sách quyền mức bảng";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView3.Location = new System.Drawing.Point(689, 384);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(404, 186);
+            this.dataGridView3.TabIndex = 37;
             // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 606);
+            this.ClientSize = new System.Drawing.Size(1163, 672);
             this.Controls.Add(this.bigtabcontrol);
             this.Controls.Add(this.account);
             this.Name = "admin";
@@ -1807,6 +1899,7 @@ namespace atbm
             this.groupBox2.PerformLayout();
             this.capquyen.ResumeLayout(false);
             this.capquyen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grantquyen_listquyen)).EndInit();
             this.cauquyengb.ResumeLayout(false);
             this.smallControl.ResumeLayout(false);
@@ -1845,6 +1938,7 @@ namespace atbm
             this.dsnguoidung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.bigtabcontrol.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1937,7 +2031,6 @@ namespace atbm
         private System.Windows.Forms.RadioButton capquyenuserrb;
         private System.Windows.Forms.RadioButton capquyenrolerb;
         private System.Windows.Forms.TabPage quanly;
-        private System.Windows.Forms.CheckBox quanly_grantoption;
         private System.Windows.Forms.GroupBox caproleforuser;
         private System.Windows.Forms.Label quanly_assignforuser;
         private System.Windows.Forms.TextBox grantrole_username;
@@ -1986,6 +2079,14 @@ namespace atbm
         private System.Windows.Forms.TextBox grantrole_rolepassif;
         private System.Windows.Forms.Button inforquyen_searchuser;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox viewinputname_capquyen;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox viewname_revokequyen;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
 
