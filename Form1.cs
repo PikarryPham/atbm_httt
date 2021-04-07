@@ -474,8 +474,8 @@ namespace atbm
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra"); ;
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -631,8 +631,8 @@ namespace atbm
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra") ;
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -641,31 +641,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch(Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
             else if (capquyenuserrb.Checked)
@@ -920,31 +997,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
@@ -1292,31 +1446,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
-                }
-                else if (this.smallControl.SelectedTab == kham)
-                {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+                else if (this.smallControl.SelectedTab == kham)
+                {
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
             else if (capquyenuserrb.Checked)
@@ -1558,31 +1789,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
@@ -1650,31 +1958,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
             else if (capquyenuserrb.Checked)
@@ -1741,31 +2126,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
@@ -1831,31 +2293,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
             else if (capquyenuserrb.Checked)
@@ -1922,31 +2461,108 @@ namespace atbm
                 }
                 else if (this.smallControl.SelectedTab == phongban)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab PhongBan with role option. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == benhnhan)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Benh nhan. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == dichvukham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Dich vu kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == kham)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Kham. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == donthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == ctdonthuoc)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Ct don thuoc. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == sudungdv)
                 {
-
+                    try
+                    {
+                        MessageBox.Show("You choose tab Su dung dich vu. We will update soon!");
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
@@ -2080,8 +2696,6 @@ namespace atbm
             }
         }
         // Hien thi ds quyen tinh den muc bang - revoke
-
-
 
     }
 }

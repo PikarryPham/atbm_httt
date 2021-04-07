@@ -26,3 +26,17 @@ E:\doanbaomat-master\obj\Debug\atbm.csproj.CopyComplete
 E:\doanbaomat-master\obj\Debug\atbm.exe
 E:\doanbaomat-master\obj\Debug\atbm.pdb
 E:\doanbaomat-master\obj\Debug\atbm.csprojAssemblyReference.cache
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\bin\Debug\atbm.exe.config
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\bin\Debug\atbm.exe
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\bin\Debug\atbm.pdb
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.csprojAssemblyReference.cache
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.admin.resources
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.Login.resources
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.Properties.Resources.resources
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.csproj.GenerateResource.cache
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.csproj.CoreCompileInputs.cache
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.csproj.CopyComplete
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.exe
+C:\Users\MON\OneDrive - VNU-HCMUS\Trang Grade 3\HK2\An toàn và bảo mật dữ liệu trong HTTT\BT - ĐỒ ÁN\ĐỒ ÁN\MaNguonUngDung\obj\Debug\atbm.pdb
