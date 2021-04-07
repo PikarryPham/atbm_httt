@@ -42,8 +42,8 @@ namespace atbm
             }
             catch (Exception err)
             {
-                MessageBox.Show("Da co loi xay ra. Loi nhu sau: " + err);
-                Console.WriteLine(err.StackTrace);
+                MessageBox.Show("Da co loi xay ra");
+                //Console.WriteLine(err.StackTrace);
             }
             finally {
                 conn.Close();
@@ -85,8 +85,8 @@ namespace atbm
             } catch (Exception err)
             {
                 //MessageBox.Show("Da co loi xay ra. Loi nhu sau: " + err);
-                MessageBox.Show("Da co loi xay ra. Loi nhu sau");
-                Console.WriteLine(err.StackTrace);
+                MessageBox.Show("Da co loi xay ra");
+               // Console.WriteLine(err.StackTrace);
             }
             finally
             {
@@ -414,7 +414,7 @@ namespace atbm
                         OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Select_Thuoc_cho_Role", conn);
                         objCmd.CommandType = CommandType.StoredProcedure;
                         //ghep bien
-                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_user", OracleDbType.Varchar2);
+                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
                         capquyen_userRole.Value = userRole;
                         objCmd.Parameters.Add(capquyen_userRole);
                         OracleParameter capquyen_viewName = new OracleParameter("@Ten_view", OracleDbType.Varchar2);
@@ -492,7 +492,7 @@ namespace atbm
                         OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Select_Nhan_Vien_cho_Role", conn);
                         objCmd.CommandType = CommandType.StoredProcedure;
                         //ghep bien
-                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_user", OracleDbType.Varchar2);
+                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
                         capquyen_userRole.Value = userRole;
                         objCmd.Parameters.Add(capquyen_userRole);
                         OracleParameter capquyen_viewName = new OracleParameter("@Ten_view", OracleDbType.Varchar2);
@@ -651,7 +651,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -930,7 +930,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1063,18 +1063,89 @@ namespace atbm
             {
                 if (this.smallControl.SelectedTab == thuoc)
                 {
-                    
+                    try
+                    {
+                        string userRole = capquyen_role_name.Text;
+                        
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Update_Thuoc_cho_Role", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
+                        capquyen_userRole.Value = userRole;
+                        objCmd.Parameters.Add(capquyen_userRole);
+                        
+                        //doi voi cac bien option
+                        OracleParameter T_IDParam = new OracleParameter("@T_ID", OracleDbType.Int32);
+                        if (T_ID.Checked)
+                        {
+                            T_IDParam.Value = 1;
+                            objCmd.Parameters.Add(T_IDParam);
+                        }
+                        else
+                        {
+                            T_IDParam.Value = 0;
+                            objCmd.Parameters.Add(T_IDParam);
+                        }
+                        OracleParameter T_TENTHUOCParam = new OracleParameter("@T_TENTHUOC", OracleDbType.Int32);
+                        if (T_TENTHUOC.Checked)
+                        {
+                            T_TENTHUOCParam.Value = 1;
+                            objCmd.Parameters.Add(T_TENTHUOCParam);
+                        }
+                        else
+                        {
+                            T_TENTHUOCParam.Value = 0;
+                            objCmd.Parameters.Add(T_TENTHUOCParam);
+                        }
+                        OracleParameter T_HANGParam = new OracleParameter("@T_HANG", OracleDbType.Int32);
+                        if (T_HANG.Checked)
+                        {
+                            T_HANGParam.Value = 1;
+                            objCmd.Parameters.Add(T_HANGParam);
+                        }
+                        else
+                        {
+                            T_HANGParam.Value = 0;
+                            objCmd.Parameters.Add(T_HANGParam);
+                        }
+                        OracleParameter T_DONGIAParam = new OracleParameter("@T_DONGIA", OracleDbType.Int32);
+                        if (T_DONGIA.Checked)
+                        {
+                            T_DONGIAParam.Value = 1;
+                            objCmd.Parameters.Add(T_DONGIAParam);
+                        }
+                        else
+                        {
+                            T_DONGIAParam.Value = 0;
+                            objCmd.Parameters.Add(T_DONGIAParam);
+                        }
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
+
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == nhanvien)
                 {
                     try
                     {
-
                         string userRole = capquyen_role_name.Text;
                         OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Update_Nhan_Vien_cho_Role", conn);
                         objCmd.CommandType = CommandType.StoredProcedure;
                         //ghep bien
-                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_user", OracleDbType.Varchar2);
+                        
+                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
                         capquyen_userRole.Value = userRole;
                         objCmd.Parameters.Add(capquyen_userRole);
                         
@@ -1211,8 +1282,8 @@ namespace atbm
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -1227,7 +1298,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1252,7 +1323,81 @@ namespace atbm
             {
                 if (this.smallControl.SelectedTab == thuoc)
                 {
-                    
+                    try
+                    {
+                        string userRole = capquyen_user_name.Text;
+
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Quyen_Update_Thuoc_cho_User", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userRole = new OracleParameter("@Ten_user", OracleDbType.Varchar2);
+                        capquyen_userRole.Value = userRole;
+                        objCmd.Parameters.Add(capquyen_userRole);
+
+                        //doi voi cac bien option
+                        OracleParameter T_IDParam = new OracleParameter("@T_ID", OracleDbType.Int32);
+                        if (T_ID.Checked)
+                        {
+                            T_IDParam.Value = 1;
+                            objCmd.Parameters.Add(T_IDParam);
+                        }
+                        else
+                        {
+                            T_IDParam.Value = 0;
+                            objCmd.Parameters.Add(T_IDParam);
+                        }
+                        OracleParameter T_TENTHUOCParam = new OracleParameter("@T_TENTHUOC", OracleDbType.Int32);
+                        if (T_TENTHUOC.Checked)
+                        {
+                            T_TENTHUOCParam.Value = 1;
+                            objCmd.Parameters.Add(T_TENTHUOCParam);
+                        }
+                        else
+                        {
+                            T_TENTHUOCParam.Value = 0;
+                            objCmd.Parameters.Add(T_TENTHUOCParam);
+                        }
+                        OracleParameter T_HANGParam = new OracleParameter("@T_HANG", OracleDbType.Int32);
+                        if (T_HANG.Checked)
+                        {
+                            T_HANGParam.Value = 1;
+                            objCmd.Parameters.Add(T_HANGParam);
+                        }
+                        else
+                        {
+                            T_HANGParam.Value = 0;
+                            objCmd.Parameters.Add(T_HANGParam);
+                        }
+                        OracleParameter T_DONGIAParam = new OracleParameter("@T_DONGIA", OracleDbType.Int32);
+                        if (T_DONGIA.Checked)
+                        {
+                            T_DONGIAParam.Value = 1;
+                            objCmd.Parameters.Add(T_DONGIAParam);
+                        }
+                        else
+                        {
+                            T_DONGIAParam.Value = 0;
+                            objCmd.Parameters.Add(T_DONGIAParam);
+                        }
+                        OracleParameter grant_optionParam = new OracleParameter("@GRANT_OP", OracleDbType.Int32);
+                        grant_optionParam.Value = grantoption_THUOC.Checked ? 1 : 0;
+                        objCmd.Parameters.Add(grant_optionParam);
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
+
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra" + err); ;
+                        Console.WriteLine(err.StackTrace);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == nhanvien)
                 {
@@ -1423,7 +1568,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1449,18 +1594,54 @@ namespace atbm
             {
                 if (this.smallControl.SelectedTab == thuoc)
                 {
-
+                    try
+                    {
+                        string userName = capquyen_role_name.Text;
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Insert_Thuoc_Role", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userName = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
+                        capquyen_userName.Value = userName;
+                        objCmd.Parameters.Add(capquyen_userName);
+                        //khai bao bien out
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == nhanvien)
                 {
                     try
                     {
+                        string userName = capquyen_role_name.Text;
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Insert_Nhan_Vien_Role", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userName = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
+                        capquyen_userName.Value = userName;
+                        objCmd.Parameters.Add(capquyen_userName);
                         
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -1479,7 +1660,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1510,7 +1691,7 @@ namespace atbm
                         capquyen_userName.Value = userName;
                         objCmd.Parameters.Add(capquyen_userName);
                         OracleParameter grant_optionParam = new OracleParameter("@Grant_op", OracleDbType.Int32);
-                        grant_optionParam.Value = grantNhanvien.Checked ? 1 : 0;
+                        grant_optionParam.Value = grantoption_THUOC.Checked ? 1 : 0;
                         objCmd.Parameters.Add(grant_optionParam);
                         objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
                         objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
@@ -1520,8 +1701,8 @@ namespace atbm
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -1550,8 +1731,8 @@ namespace atbm
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -1570,7 +1751,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1596,18 +1777,52 @@ namespace atbm
             {
                 if (this.smallControl.SelectedTab == thuoc)
                 {
-                    
+                    try
+                    {
+                        string userName = capquyen_role_name.Text;
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Delete_Thuoc_Role", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userName = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
+                        capquyen_userName.Value = userName;
+                        objCmd.Parameters.Add(capquyen_userName);
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
                 else if (this.smallControl.SelectedTab == nhanvien)
                 {
                     try
                     {
-
+                        string userName = capquyen_role_name.Text;
+                        OracleCommand objCmd = new OracleCommand("c##administrator.AD_Cap_Delete_Nhan_Vien_Role", conn);
+                        objCmd.CommandType = CommandType.StoredProcedure;
+                        //ghep bien
+                        OracleParameter capquyen_userName = new OracleParameter("@Ten_role", OracleDbType.Varchar2);
+                        capquyen_userName.Value = userName;
+                        objCmd.Parameters.Add(capquyen_userName);
+                        objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
+                        objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                        objCmd.ExecuteNonQuery();
+                        string perror2 = objCmd.Parameters["@p_Error"].Value.ToString();
+                        MessageBox.Show("Thong bao" + perror2);
                     }
                     catch (Exception err)
                     {
-                        MessageBox.Show("Da co loi xay ra" + err); ;
-                        Console.WriteLine(err.StackTrace);
+                        MessageBox.Show("Da co loi xay ra");
+                        //Console.WriteLine(err.StackTrace);
                     }
                     finally
                     {
@@ -1626,7 +1841,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1657,7 +1872,7 @@ namespace atbm
                         capquyen_userName.Value = userName;
                         objCmd.Parameters.Add(capquyen_userName);
                         OracleParameter grant_optionParam = new OracleParameter("@Grant_op", OracleDbType.Int32);
-                        grant_optionParam.Value = grantNhanvien.Checked ? 1 : 0;
+                        grant_optionParam.Value = grantoption_THUOC.Checked ? 1 : 0;
                         objCmd.Parameters.Add(grant_optionParam);
                         objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 32767));
                         objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
@@ -1717,7 +1932,7 @@ namespace atbm
                 {
 
                 }
-                else if (this.smallControl.SelectedTab == dichvukham)
+                else if (this.smallControl.SelectedTab == kham)
                 {
 
                 }
@@ -1735,7 +1950,138 @@ namespace atbm
                 }
             }
         }
+
+        private void revokeselect_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            try
+            {
+                    string tenrobject = revoke_object.Text.ToLower();
+                    string tenview = revoke_view.Text.ToLower();
+                    OracleCommand objCmd = new OracleCommand("c##administrator.AD_Thu_Hoi_Select_Bang_view", conn);
+                    objCmd.CommandType = CommandType.StoredProcedure;
+                    OracleParameter quanlyRole_tenrole = new OracleParameter("@Ten_user_role", OracleDbType.Varchar2);
+                    quanlyRole_tenrole.Value = tenrobject;
+                    objCmd.Parameters.Add(quanlyRole_tenrole);
+                    OracleParameter quanlyRole_passrole = new OracleParameter("@Ten_bang_view", OracleDbType.Varchar2);
+                    quanlyRole_passrole.Value = tenview;
+                    objCmd.Parameters.Add(quanlyRole_passrole);
+                    objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 200));
+                    objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                    objCmd.ExecuteNonQuery();
+                    string perror1 = objCmd.Parameters["@p_Error"].Value.ToString();
+                    MessageBox.Show(perror1);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Da co loi xay ra"); ;
+                //Console.WriteLine(err.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void revokeupdate_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            try
+            {
+                string tenrobject = revoke_object.Text.ToLower();
+                string tenview = revoke_view.Text.ToLower();
+                OracleCommand objCmd = new OracleCommand("c##administrator.AD_Thu_Hoi_Update_Bang_view", conn);
+                objCmd.CommandType = CommandType.StoredProcedure;
+                OracleParameter quanlyRole_tenrole = new OracleParameter("@Ten_user_role", OracleDbType.Varchar2);
+                quanlyRole_tenrole.Value = tenrobject;
+                objCmd.Parameters.Add(quanlyRole_tenrole);
+                OracleParameter quanlyRole_passrole = new OracleParameter("@Ten_bang_view", OracleDbType.Varchar2);
+                quanlyRole_passrole.Value = tenview;
+                objCmd.Parameters.Add(quanlyRole_passrole);
+                objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 200));
+                objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                objCmd.ExecuteNonQuery();
+                string perror1 = objCmd.Parameters["@p_Error"].Value.ToString();
+                MessageBox.Show(perror1);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Da co loi xay ra"); ;
+                //Console.WriteLine(err.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void revokeinsert_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            try
+            {
+                string tenrobject = revoke_object.Text.ToLower();
+                string tenview = revoke_view.Text.ToLower();
+                OracleCommand objCmd = new OracleCommand("c##administrator.AD_Thu_Hoi_Insert_Bang_view", conn);
+                objCmd.CommandType = CommandType.StoredProcedure;
+                OracleParameter quanlyRole_tenrole = new OracleParameter("@Ten_user_role", OracleDbType.Varchar2);
+                quanlyRole_tenrole.Value = tenrobject;
+                objCmd.Parameters.Add(quanlyRole_tenrole);
+                OracleParameter quanlyRole_passrole = new OracleParameter("@Ten_bang_view", OracleDbType.Varchar2);
+                quanlyRole_passrole.Value = tenview;
+                objCmd.Parameters.Add(quanlyRole_passrole);
+                objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 200));
+                objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                objCmd.ExecuteNonQuery();
+                string perror1 = objCmd.Parameters["@p_Error"].Value.ToString();
+                MessageBox.Show(perror1);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Da co loi xay ra"); ;
+                //Console.WriteLine(err.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void revokedelete_Click(object sender, EventArgs e)
+        {
+            
+            conn.Open();
+            try
+            {
+                string tenrobject = revoke_object.Text.ToLower();
+                string tenview = revoke_view.Text.ToLower();
+                OracleCommand objCmd = new OracleCommand("c##administrator.AD_Thu_Hoi_Delete_Bang_view", conn);
+                objCmd.CommandType = CommandType.StoredProcedure;
+                OracleParameter quanlyRole_tenrole = new OracleParameter("@Ten_user_role", OracleDbType.Varchar2);
+                quanlyRole_tenrole.Value = tenrobject;
+                objCmd.Parameters.Add(quanlyRole_tenrole);
+                OracleParameter quanlyRole_passrole = new OracleParameter("@Ten_bang_view", OracleDbType.Varchar2);
+                quanlyRole_passrole.Value = tenview;
+                objCmd.Parameters.Add(quanlyRole_passrole);
+                objCmd.Parameters.Add(new OracleParameter("@p_Error", OracleDbType.Varchar2, 200));
+                objCmd.Parameters["@p_Error"].Direction = ParameterDirection.Output;
+                objCmd.ExecuteNonQuery();
+                string perror1 = objCmd.Parameters["@p_Error"].Value.ToString();
+                MessageBox.Show(perror1);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Da co loi xay ra"); ;
+                //Console.WriteLine(err.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         // Hien thi ds quyen tinh den muc bang - revoke
+
+
 
     }
 }
