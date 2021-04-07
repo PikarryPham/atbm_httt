@@ -91,8 +91,24 @@ namespace atbm
             this.label10 = new System.Windows.Forms.Label();
             this.smallControl = new System.Windows.Forms.TabControl();
             this.nhanvien = new System.Windows.Forms.TabPage();
+            this.NV_CONLV = new System.Windows.Forms.CheckBox();
+            this.NV_PB = new System.Windows.Forms.CheckBox();
+            this.NV_PHUCAP = new System.Windows.Forms.CheckBox();
+            this.NV_SONGAYCONG = new System.Windows.Forms.CheckBox();
+            this.NV_LOAI = new System.Windows.Forms.CheckBox();
+            this.NV_LUONGCB = new System.Windows.Forms.CheckBox();
+            this.NV_LUONG = new System.Windows.Forms.CheckBox();
+            this.NV_SDT = new System.Windows.Forms.CheckBox();
+            this.NV_DIACHI = new System.Windows.Forms.CheckBox();
+            this.NV_NAMSINH = new System.Windows.Forms.CheckBox();
+            this.NV_TEN = new System.Windows.Forms.CheckBox();
+            this.NV_ID = new System.Windows.Forms.CheckBox();
             this.grantNhanvien = new System.Windows.Forms.CheckBox();
             this.thuoc = new System.Windows.Forms.TabPage();
+            this.T_DONGIA = new System.Windows.Forms.CheckBox();
+            this.T_HANG = new System.Windows.Forms.CheckBox();
+            this.T_TENTHUOC = new System.Windows.Forms.CheckBox();
+            this.T_ID = new System.Windows.Forms.CheckBox();
             this.grantoption_THUOC = new System.Windows.Forms.CheckBox();
             this.kham = new System.Windows.Forms.TabPage();
             this.colKHAM = new System.Windows.Forms.CheckedListBox();
@@ -166,22 +182,14 @@ namespace atbm
             this.timkiemuserrolelbl = new System.Windows.Forms.Label();
             this.timkiemuserroletb = new System.Windows.Forms.TextBox();
             this.bigtabcontrol = new System.Windows.Forms.TabControl();
-            this.T_ID = new System.Windows.Forms.CheckBox();
-            this.T_TENTHUOC = new System.Windows.Forms.CheckBox();
-            this.T_HANG = new System.Windows.Forms.CheckBox();
-            this.T_DONGIA = new System.Windows.Forms.CheckBox();
-            this.NV_ID = new System.Windows.Forms.CheckBox();
-            this.NV_TEN = new System.Windows.Forms.CheckBox();
-            this.NV_NAMSINH = new System.Windows.Forms.CheckBox();
-            this.NV_DIACHI = new System.Windows.Forms.CheckBox();
-            this.NV_SDT = new System.Windows.Forms.CheckBox();
-            this.NV_LUONG = new System.Windows.Forms.CheckBox();
-            this.NV_LUONGCB = new System.Windows.Forms.CheckBox();
-            this.NV_LOAI = new System.Windows.Forms.CheckBox();
-            this.NV_SONGAYCONG = new System.Windows.Forms.CheckBox();
-            this.NV_PHUCAP = new System.Windows.Forms.CheckBox();
-            this.NV_PB = new System.Windows.Forms.CheckBox();
-            this.NV_CONLV = new System.Windows.Forms.CheckBox();
+            this.KH_ID = new System.Windows.Forms.CheckBox();
+            this.KH_TRIEUCHUNG = new System.Windows.Forms.CheckBox();
+            this.KH_THOIGIAN = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.thuhoiquyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.revokequyen_listquyen)).BeginInit();
@@ -369,7 +377,6 @@ namespace atbm
             this.revokeinsert.TabIndex = 15;
             this.revokeinsert.Text = "Insert";
             this.revokeinsert.UseVisualStyleBackColor = true;
-            this.revokeinsert.Click += new System.EventHandler(this.revokeinsert_Click);
             // 
             // revokeselect
             // 
@@ -905,6 +912,7 @@ namespace atbm
             this.updatebtn.TabIndex = 17;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // deletebtn
             // 
@@ -915,6 +923,7 @@ namespace atbm
             this.deletebtn.TabIndex = 16;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = true;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // insertbtn
             // 
@@ -925,6 +934,7 @@ namespace atbm
             this.insertbtn.TabIndex = 15;
             this.insertbtn.Text = "Insert";
             this.insertbtn.UseVisualStyleBackColor = true;
+            this.insertbtn.Click += new System.EventHandler(this.insertbtn_Click);
             // 
             // selectbtn
             // 
@@ -987,6 +997,127 @@ namespace atbm
             this.nhanvien.TabIndex = 0;
             this.nhanvien.Text = "NHANVIEN";
             // 
+            // NV_CONLV
+            // 
+            this.NV_CONLV.AutoSize = true;
+            this.NV_CONLV.Location = new System.Drawing.Point(350, 51);
+            this.NV_CONLV.Name = "NV_CONLV";
+            this.NV_CONLV.Size = new System.Drawing.Size(104, 21);
+            this.NV_CONLV.TabIndex = 34;
+            this.NV_CONLV.Text = "NV_CONLV";
+            this.NV_CONLV.UseVisualStyleBackColor = true;
+            // 
+            // NV_PB
+            // 
+            this.NV_PB.AutoSize = true;
+            this.NV_PB.Location = new System.Drawing.Point(350, 24);
+            this.NV_PB.Name = "NV_PB";
+            this.NV_PB.Size = new System.Drawing.Size(75, 21);
+            this.NV_PB.TabIndex = 33;
+            this.NV_PB.Text = "NV_PB";
+            this.NV_PB.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.NV_PB.UseVisualStyleBackColor = true;
+            // 
+            // NV_PHUCAP
+            // 
+            this.NV_PHUCAP.AutoSize = true;
+            this.NV_PHUCAP.Location = new System.Drawing.Point(214, 267);
+            this.NV_PHUCAP.Name = "NV_PHUCAP";
+            this.NV_PHUCAP.Size = new System.Drawing.Size(113, 21);
+            this.NV_PHUCAP.TabIndex = 32;
+            this.NV_PHUCAP.Text = "NV_PHUCAP";
+            this.NV_PHUCAP.UseVisualStyleBackColor = true;
+            // 
+            // NV_SONGAYCONG
+            // 
+            this.NV_SONGAYCONG.AutoSize = true;
+            this.NV_SONGAYCONG.Location = new System.Drawing.Point(214, 240);
+            this.NV_SONGAYCONG.Name = "NV_SONGAYCONG";
+            this.NV_SONGAYCONG.Size = new System.Drawing.Size(157, 21);
+            this.NV_SONGAYCONG.TabIndex = 31;
+            this.NV_SONGAYCONG.Text = "NV_SONGAYCONG";
+            this.NV_SONGAYCONG.UseVisualStyleBackColor = true;
+            // 
+            // NV_LOAI
+            // 
+            this.NV_LOAI.AutoSize = true;
+            this.NV_LOAI.Location = new System.Drawing.Point(214, 213);
+            this.NV_LOAI.Name = "NV_LOAI";
+            this.NV_LOAI.Size = new System.Drawing.Size(88, 21);
+            this.NV_LOAI.TabIndex = 30;
+            this.NV_LOAI.Text = "NV_LOAI";
+            this.NV_LOAI.UseVisualStyleBackColor = true;
+            // 
+            // NV_LUONGCB
+            // 
+            this.NV_LUONGCB.AutoSize = true;
+            this.NV_LUONGCB.Location = new System.Drawing.Point(214, 186);
+            this.NV_LUONGCB.Name = "NV_LUONGCB";
+            this.NV_LUONGCB.Size = new System.Drawing.Size(125, 21);
+            this.NV_LUONGCB.TabIndex = 29;
+            this.NV_LUONGCB.Text = "NV_LUONGCB";
+            this.NV_LUONGCB.UseVisualStyleBackColor = true;
+            // 
+            // NV_LUONG
+            // 
+            this.NV_LUONG.AutoSize = true;
+            this.NV_LUONG.Location = new System.Drawing.Point(214, 159);
+            this.NV_LUONG.Name = "NV_LUONG";
+            this.NV_LUONG.Size = new System.Drawing.Size(107, 21);
+            this.NV_LUONG.TabIndex = 28;
+            this.NV_LUONG.Text = "NV_LUONG";
+            this.NV_LUONG.UseVisualStyleBackColor = true;
+            // 
+            // NV_SDT
+            // 
+            this.NV_SDT.AutoSize = true;
+            this.NV_SDT.Location = new System.Drawing.Point(214, 132);
+            this.NV_SDT.Name = "NV_SDT";
+            this.NV_SDT.Size = new System.Drawing.Size(85, 21);
+            this.NV_SDT.TabIndex = 27;
+            this.NV_SDT.Text = "NV_SDT";
+            this.NV_SDT.UseVisualStyleBackColor = true;
+            // 
+            // NV_DIACHI
+            // 
+            this.NV_DIACHI.AutoSize = true;
+            this.NV_DIACHI.Location = new System.Drawing.Point(214, 105);
+            this.NV_DIACHI.Name = "NV_DIACHI";
+            this.NV_DIACHI.Size = new System.Drawing.Size(101, 21);
+            this.NV_DIACHI.TabIndex = 26;
+            this.NV_DIACHI.Text = "NV_DIACHI";
+            this.NV_DIACHI.UseVisualStyleBackColor = true;
+            // 
+            // NV_NAMSINH
+            // 
+            this.NV_NAMSINH.AutoSize = true;
+            this.NV_NAMSINH.Location = new System.Drawing.Point(214, 78);
+            this.NV_NAMSINH.Name = "NV_NAMSINH";
+            this.NV_NAMSINH.Size = new System.Drawing.Size(119, 21);
+            this.NV_NAMSINH.TabIndex = 25;
+            this.NV_NAMSINH.Text = "NV_NAMSINH";
+            this.NV_NAMSINH.UseVisualStyleBackColor = true;
+            // 
+            // NV_TEN
+            // 
+            this.NV_TEN.AutoSize = true;
+            this.NV_TEN.Location = new System.Drawing.Point(214, 51);
+            this.NV_TEN.Name = "NV_TEN";
+            this.NV_TEN.Size = new System.Drawing.Size(85, 21);
+            this.NV_TEN.TabIndex = 24;
+            this.NV_TEN.Text = "NV_TEN";
+            this.NV_TEN.UseVisualStyleBackColor = true;
+            // 
+            // NV_ID
+            // 
+            this.NV_ID.AutoSize = true;
+            this.NV_ID.Location = new System.Drawing.Point(214, 24);
+            this.NV_ID.Name = "NV_ID";
+            this.NV_ID.Size = new System.Drawing.Size(70, 21);
+            this.NV_ID.TabIndex = 23;
+            this.NV_ID.Text = "NV_ID";
+            this.NV_ID.UseVisualStyleBackColor = true;
+            // 
             // grantNhanvien
             // 
             this.grantNhanvien.AutoSize = true;
@@ -1012,6 +1143,46 @@ namespace atbm
             this.thuoc.TabIndex = 5;
             this.thuoc.Text = "THUOC";
             // 
+            // T_DONGIA
+            // 
+            this.T_DONGIA.AutoSize = true;
+            this.T_DONGIA.Location = new System.Drawing.Point(422, 128);
+            this.T_DONGIA.Name = "T_DONGIA";
+            this.T_DONGIA.Size = new System.Drawing.Size(101, 21);
+            this.T_DONGIA.TabIndex = 41;
+            this.T_DONGIA.Text = "T_DONGIA";
+            this.T_DONGIA.UseVisualStyleBackColor = true;
+            // 
+            // T_HANG
+            // 
+            this.T_HANG.AutoSize = true;
+            this.T_HANG.Location = new System.Drawing.Point(422, 101);
+            this.T_HANG.Name = "T_HANG";
+            this.T_HANG.Size = new System.Drawing.Size(87, 21);
+            this.T_HANG.TabIndex = 40;
+            this.T_HANG.Text = "T_HANG";
+            this.T_HANG.UseVisualStyleBackColor = true;
+            // 
+            // T_TENTHUOC
+            // 
+            this.T_TENTHUOC.AutoSize = true;
+            this.T_TENTHUOC.Location = new System.Drawing.Point(422, 74);
+            this.T_TENTHUOC.Name = "T_TENTHUOC";
+            this.T_TENTHUOC.Size = new System.Drawing.Size(124, 21);
+            this.T_TENTHUOC.TabIndex = 39;
+            this.T_TENTHUOC.Text = "T_TENTHUOC";
+            this.T_TENTHUOC.UseVisualStyleBackColor = true;
+            // 
+            // T_ID
+            // 
+            this.T_ID.AutoSize = true;
+            this.T_ID.Location = new System.Drawing.Point(422, 47);
+            this.T_ID.Name = "T_ID";
+            this.T_ID.Size = new System.Drawing.Size(60, 21);
+            this.T_ID.TabIndex = 38;
+            this.T_ID.Text = "T_ID";
+            this.T_ID.UseVisualStyleBackColor = true;
+            // 
             // grantoption_THUOC
             // 
             this.grantoption_THUOC.AutoSize = true;
@@ -1026,6 +1197,14 @@ namespace atbm
             // kham
             // 
             this.kham.BackColor = System.Drawing.Color.Turquoise;
+            this.kham.Controls.Add(this.checkBox14);
+            this.kham.Controls.Add(this.checkBox13);
+            this.kham.Controls.Add(this.checkBox12);
+            this.kham.Controls.Add(this.checkBox11);
+            this.kham.Controls.Add(this.checkBox10);
+            this.kham.Controls.Add(this.KH_THOIGIAN);
+            this.kham.Controls.Add(this.KH_TRIEUCHUNG);
+            this.kham.Controls.Add(this.KH_ID);
             this.kham.Controls.Add(this.colKHAM);
             this.kham.Controls.Add(this.grantoption_KHAM);
             this.kham.Location = new System.Drawing.Point(4, 25);
@@ -1832,166 +2011,85 @@ namespace atbm
             this.bigtabcontrol.Size = new System.Drawing.Size(1117, 611);
             this.bigtabcontrol.TabIndex = 1;
             // 
-            // T_ID
+            // KH_ID
             // 
-            this.T_ID.AutoSize = true;
-            this.T_ID.Location = new System.Drawing.Point(422, 47);
-            this.T_ID.Name = "T_ID";
-            this.T_ID.Size = new System.Drawing.Size(60, 21);
-            this.T_ID.TabIndex = 38;
-            this.T_ID.Text = "T_ID";
-            this.T_ID.UseVisualStyleBackColor = true;
+            this.KH_ID.AutoSize = true;
+            this.KH_ID.Location = new System.Drawing.Point(425, 19);
+            this.KH_ID.Name = "KH_ID";
+            this.KH_ID.Size = new System.Drawing.Size(70, 21);
+            this.KH_ID.TabIndex = 26;
+            this.KH_ID.Text = "KH_ID";
+            this.KH_ID.UseVisualStyleBackColor = true;
             // 
-            // T_TENTHUOC
+            // KH_TRIEUCHUNG
             // 
-            this.T_TENTHUOC.AutoSize = true;
-            this.T_TENTHUOC.Location = new System.Drawing.Point(422, 74);
-            this.T_TENTHUOC.Name = "T_TENTHUOC";
-            this.T_TENTHUOC.Size = new System.Drawing.Size(124, 21);
-            this.T_TENTHUOC.TabIndex = 39;
-            this.T_TENTHUOC.Text = "T_TENTHUOC";
-            this.T_TENTHUOC.UseVisualStyleBackColor = true;
+            this.KH_TRIEUCHUNG.AutoSize = true;
+            this.KH_TRIEUCHUNG.Location = new System.Drawing.Point(425, 46);
+            this.KH_TRIEUCHUNG.Name = "KH_TRIEUCHUNG";
+            this.KH_TRIEUCHUNG.Size = new System.Drawing.Size(148, 21);
+            this.KH_TRIEUCHUNG.TabIndex = 27;
+            this.KH_TRIEUCHUNG.Text = "KH_TRIEUCHUNG";
+            this.KH_TRIEUCHUNG.UseVisualStyleBackColor = true;
             // 
-            // T_HANG
+            // KH_THOIGIAN
             // 
-            this.T_HANG.AutoSize = true;
-            this.T_HANG.Location = new System.Drawing.Point(422, 101);
-            this.T_HANG.Name = "T_HANG";
-            this.T_HANG.Size = new System.Drawing.Size(87, 21);
-            this.T_HANG.TabIndex = 40;
-            this.T_HANG.Text = "T_HANG";
-            this.T_HANG.UseVisualStyleBackColor = true;
+            this.KH_THOIGIAN.AutoSize = true;
+            this.KH_THOIGIAN.Location = new System.Drawing.Point(425, 73);
+            this.KH_THOIGIAN.Name = "KH_THOIGIAN";
+            this.KH_THOIGIAN.Size = new System.Drawing.Size(123, 21);
+            this.KH_THOIGIAN.TabIndex = 28;
+            this.KH_THOIGIAN.Text = "KH_THOIGIAN";
+            this.KH_THOIGIAN.UseVisualStyleBackColor = true;
             // 
-            // T_DONGIA
+            // checkBox10
             // 
-            this.T_DONGIA.AutoSize = true;
-            this.T_DONGIA.Location = new System.Drawing.Point(422, 128);
-            this.T_DONGIA.Name = "T_DONGIA";
-            this.T_DONGIA.Size = new System.Drawing.Size(101, 21);
-            this.T_DONGIA.TabIndex = 41;
-            this.T_DONGIA.Text = "T_DONGIA";
-            this.T_DONGIA.UseVisualStyleBackColor = true;
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(425, 100);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(106, 21);
+            this.checkBox10.TabIndex = 29;
+            this.checkBox10.Text = "checkBox10";
+            this.checkBox10.UseVisualStyleBackColor = true;
             // 
-            // NV_ID
+            // checkBox11
             // 
-            this.NV_ID.AutoSize = true;
-            this.NV_ID.Location = new System.Drawing.Point(214, 24);
-            this.NV_ID.Name = "NV_ID";
-            this.NV_ID.Size = new System.Drawing.Size(70, 21);
-            this.NV_ID.TabIndex = 23;
-            this.NV_ID.Text = "NV_ID";
-            this.NV_ID.UseVisualStyleBackColor = true;
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Location = new System.Drawing.Point(425, 127);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(106, 21);
+            this.checkBox11.TabIndex = 30;
+            this.checkBox11.Text = "checkBox11";
+            this.checkBox11.UseVisualStyleBackColor = true;
             // 
-            // NV_TEN
+            // checkBox12
             // 
-            this.NV_TEN.AutoSize = true;
-            this.NV_TEN.Location = new System.Drawing.Point(214, 51);
-            this.NV_TEN.Name = "NV_TEN";
-            this.NV_TEN.Size = new System.Drawing.Size(85, 21);
-            this.NV_TEN.TabIndex = 24;
-            this.NV_TEN.Text = "NV_TEN";
-            this.NV_TEN.UseVisualStyleBackColor = true;
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(425, 154);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(106, 21);
+            this.checkBox12.TabIndex = 31;
+            this.checkBox12.Text = "checkBox12";
+            this.checkBox12.UseVisualStyleBackColor = true;
             // 
-            // NV_NAMSINH
+            // checkBox13
             // 
-            this.NV_NAMSINH.AutoSize = true;
-            this.NV_NAMSINH.Location = new System.Drawing.Point(214, 78);
-            this.NV_NAMSINH.Name = "NV_NAMSINH";
-            this.NV_NAMSINH.Size = new System.Drawing.Size(119, 21);
-            this.NV_NAMSINH.TabIndex = 25;
-            this.NV_NAMSINH.Text = "NV_NAMSINH";
-            this.NV_NAMSINH.UseVisualStyleBackColor = true;
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Location = new System.Drawing.Point(425, 183);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(106, 21);
+            this.checkBox13.TabIndex = 32;
+            this.checkBox13.Text = "checkBox13";
+            this.checkBox13.UseVisualStyleBackColor = true;
             // 
-            // NV_DIACHI
+            // checkBox14
             // 
-            this.NV_DIACHI.AutoSize = true;
-            this.NV_DIACHI.Location = new System.Drawing.Point(214, 105);
-            this.NV_DIACHI.Name = "NV_DIACHI";
-            this.NV_DIACHI.Size = new System.Drawing.Size(101, 21);
-            this.NV_DIACHI.TabIndex = 26;
-            this.NV_DIACHI.Text = "NV_DIACHI";
-            this.NV_DIACHI.UseVisualStyleBackColor = true;
-            // 
-            // NV_SDT
-            // 
-            this.NV_SDT.AutoSize = true;
-            this.NV_SDT.Location = new System.Drawing.Point(214, 132);
-            this.NV_SDT.Name = "NV_SDT";
-            this.NV_SDT.Size = new System.Drawing.Size(85, 21);
-            this.NV_SDT.TabIndex = 27;
-            this.NV_SDT.Text = "NV_SDT";
-            this.NV_SDT.UseVisualStyleBackColor = true;
-            // 
-            // NV_LUONG
-            // 
-            this.NV_LUONG.AutoSize = true;
-            this.NV_LUONG.Location = new System.Drawing.Point(214, 159);
-            this.NV_LUONG.Name = "NV_LUONG";
-            this.NV_LUONG.Size = new System.Drawing.Size(107, 21);
-            this.NV_LUONG.TabIndex = 28;
-            this.NV_LUONG.Text = "NV_LUONG";
-            this.NV_LUONG.UseVisualStyleBackColor = true;
-            // 
-            // NV_LUONGCB
-            // 
-            this.NV_LUONGCB.AutoSize = true;
-            this.NV_LUONGCB.Location = new System.Drawing.Point(214, 186);
-            this.NV_LUONGCB.Name = "NV_LUONGCB";
-            this.NV_LUONGCB.Size = new System.Drawing.Size(125, 21);
-            this.NV_LUONGCB.TabIndex = 29;
-            this.NV_LUONGCB.Text = "NV_LUONGCB";
-            this.NV_LUONGCB.UseVisualStyleBackColor = true;
-            // 
-            // NV_LOAI
-            // 
-            this.NV_LOAI.AutoSize = true;
-            this.NV_LOAI.Location = new System.Drawing.Point(214, 213);
-            this.NV_LOAI.Name = "NV_LOAI";
-            this.NV_LOAI.Size = new System.Drawing.Size(88, 21);
-            this.NV_LOAI.TabIndex = 30;
-            this.NV_LOAI.Text = "NV_LOAI";
-            this.NV_LOAI.UseVisualStyleBackColor = true;
-            // 
-            // NV_SONGAYCONG
-            // 
-            this.NV_SONGAYCONG.AutoSize = true;
-            this.NV_SONGAYCONG.Location = new System.Drawing.Point(214, 240);
-            this.NV_SONGAYCONG.Name = "NV_SONGAYCONG";
-            this.NV_SONGAYCONG.Size = new System.Drawing.Size(157, 21);
-            this.NV_SONGAYCONG.TabIndex = 31;
-            this.NV_SONGAYCONG.Text = "NV_SONGAYCONG";
-            this.NV_SONGAYCONG.UseVisualStyleBackColor = true;
-            // 
-            // NV_PHUCAP
-            // 
-            this.NV_PHUCAP.AutoSize = true;
-            this.NV_PHUCAP.Location = new System.Drawing.Point(214, 267);
-            this.NV_PHUCAP.Name = "NV_PHUCAP";
-            this.NV_PHUCAP.Size = new System.Drawing.Size(113, 21);
-            this.NV_PHUCAP.TabIndex = 32;
-            this.NV_PHUCAP.Text = "NV_PHUCAP";
-            this.NV_PHUCAP.UseVisualStyleBackColor = true;
-            // 
-            // NV_PB
-            // 
-            this.NV_PB.AutoSize = true;
-            this.NV_PB.Location = new System.Drawing.Point(350, 24);
-            this.NV_PB.Name = "NV_PB";
-            this.NV_PB.Size = new System.Drawing.Size(75, 21);
-            this.NV_PB.TabIndex = 33;
-            this.NV_PB.Text = "NV_PB";
-            this.NV_PB.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.NV_PB.UseVisualStyleBackColor = true;
-            // 
-            // NV_CONLV
-            // 
-            this.NV_CONLV.AutoSize = true;
-            this.NV_CONLV.Location = new System.Drawing.Point(350, 51);
-            this.NV_CONLV.Name = "NV_CONLV";
-            this.NV_CONLV.Size = new System.Drawing.Size(104, 21);
-            this.NV_CONLV.TabIndex = 34;
-            this.NV_CONLV.Text = "NV_CONLV";
-            this.NV_CONLV.UseVisualStyleBackColor = true;
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(425, 210);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(106, 21);
+            this.checkBox14.TabIndex = 33;
+            this.checkBox14.Text = "checkBox14";
+            this.checkBox14.UseVisualStyleBackColor = true;
             // 
             // admin
             // 
@@ -2229,6 +2327,14 @@ namespace atbm
         private System.Windows.Forms.CheckBox NV_DIACHI;
         private System.Windows.Forms.CheckBox NV_NAMSINH;
         private System.Windows.Forms.CheckBox NV_TEN;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox KH_THOIGIAN;
+        private System.Windows.Forms.CheckBox KH_TRIEUCHUNG;
+        private System.Windows.Forms.CheckBox KH_ID;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
     }
 }
 
